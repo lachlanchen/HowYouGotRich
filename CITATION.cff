@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If this book or its source records help your work, please cite it."
+title: "How You Got Rich"
+type: software
+authors:
+  - name: "LazyingArt LLC"
+repository-code: "https://github.com/lachlanchen/how-you-got-rich"
+url: "https://github.com/lachlanchen/how-you-got-rich"
+date-released: "2026-08-25"
+preferred-citation:
+  type: book
+  title: "How You Got Rich: From Abundance to Fulfillment and Contentment"
+  authors:
+    - name: "LazyingArt LLC"
+  year: 2026
+  publisher:
+    name: "LazyingArt and LazyLearn"
+  url: "https://github.com/lachlanchen/how-you-got-rich"
