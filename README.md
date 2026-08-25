@@ -1,5 +1,10 @@
 # How You Got Rich
 
+> [!IMPORTANT]
+> This earlier standalone repository is preserved for history and is no longer
+> updated. The canonical book, all retained editions, and future V3 work are at
+> [`lachlanchen/HowYouGotRich`](https://github.com/lachlanchen/HowYouGotRich).
+
 <p align="center">
   <a href="editions/how-you-got-rich.pdf">
     <img src="assets/cover-page-1.png" alt="How You Got Rich cover" width="520">
