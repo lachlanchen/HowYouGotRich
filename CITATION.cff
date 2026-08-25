@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If this book or its source records help your work, please cite it."
+title: "How You Got Rich"
+type: software
+authors:
+  - name: "LazyingArt LLC"
+repository-code: "https://github.com/lachlanchen/HowYouGotRich"
+url: "https://github.com/lachlanchen/HowYouGotRich"
+date-released: 2026-08-25
+preferred-citation:
+  type: book
+  title: "How You Got Rich: What 135 Conversations Reveal about Work, Ownership, Risk, and Enough"
+  authors:
+    - name: "LazyingArt LLC"
+  year: 2026
+  publisher:
+    name: "LazyingArt and LazyLearn"
+  url: "https://github.com/lachlanchen/HowYouGotRich"
