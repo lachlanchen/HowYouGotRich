@@ -5,7 +5,7 @@ type: software
 authors:
   - name: "LazyingArt LLC"
 repository-code: "https://github.com/lachlanchen/HowYouGotRich"
-url: "https://github.com/lachlanchen/HowYouGotRich"
+url: "https://lachlanchen.github.io/HowYouGotRich/"
 date-released: "2026-08-25"
 preferred-citation:
   type: book
@@ -15,4 +15,4 @@ preferred-citation:
   year: 2026
   publisher:
     name: "LazyingArt and LazyLearn"
-  url: "https://github.com/lachlanchen/HowYouGotRich"
+  url: "https://lachlanchen.github.io/HowYouGotRich/"

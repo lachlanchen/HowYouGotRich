@@ -1,4 +1,4 @@
-.PHONY: all full pocket verify
+.PHONY: all full pocket verify site verify-site serve
 
 all: full pocket
 
@@ -10,3 +10,12 @@ pocket:
 
 verify:
 	./scripts/verify.sh
+
+site:
+	./scripts/build-site.sh
+
+verify-site: site
+	python3 scripts/validate-site.py build/site
+
+serve: site
+	python3 -m http.server 8000 --directory build/site

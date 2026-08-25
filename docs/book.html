@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#efe7d7">
+    <meta name="description" content="Explore the web edition and complete argument of How You Got Rich.">
+    <title>Web Edition · How You Got Rich</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="app.js" defer></script>
+  </head>
+  <body class="book-page">
+    <a class="skip-link" href="#book-main">Skip to the chapters</a>
+    <header class="site-header compact">
+      <a class="wordmark" href="index.html"><span>HOW YOU</span><strong>GOT RICH</strong></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="reader.html">PDF reader</a>
+        <a href="editions/how-you-got-rich.pdf" download>Download</a>
+        <a href="https://github.com/lachlanchen/HowYouGotRich">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="book-main">
+      <header class="web-book-hero section-shell">
+        <p class="eyebrow">WEB EDITION</p>
+        <h1>A map of the whole argument</h1>
+        <p>
+          The accepted V2 book is available in full through the PDF reader.
+          This web edition begins with its complete navigable architecture and
+          will receive accessible chapter text as each V3 chapter is accepted.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="reader.html">Read V2 in full</a>
+          <a class="button button-quiet" href="#chapters">Explore 23 chapters</a>
+        </div>
+      </header>
+
+      <section class="web-progress" aria-label="Publication status">
+        <div><span>AVAILABLE NOW</span><strong>V2 full and pocket PDFs</strong></div>
+        <div><span>IN DEVELOPMENT</span><strong>V3 chapter web text</strong></div>
+        <div><span>PUBLIC METHOD</span><strong>Source records and corrections</strong></div>
+      </section>
+
+      <section id="chapters" class="section-shell chapter-atlas">
+        <div class="atlas-heading">
+          <p class="eyebrow">THE BOOK IN 23 QUESTIONS</p>
+          <h2>Follow the argument, not a pile of advice</h2>
+          <p>Each chapter changes the question the next chapter is able to ask. Open any chapter in the accepted PDF, or read the sequence from the beginning.</p>
+        </div>
+        <div id="book-outline" class="book-outline" aria-live="polite"></div>
+      </section>
+
+      <section class="section-shell web-principle">
+        <p class="eyebrow">ONE SOURCE, MULTIPLE FORMS</p>
+        <h2>The web edition will not become a separate, drifting book.</h2>
+        <p>
+          PDF, pocket, and web forms share the same accepted manuscript,
+          chapter order, source boundaries, and edition history. A web chapter
+          is published only after it matches the accepted text and its links,
+          figures, and reading order remain usable on a narrow screen.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><strong>How You Got Rich</strong><p>LazyingArt · LazyLearn</p></div>
+      <nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="reader.html">Reader</a><a href="https://github.com/lachlanchen/HowYouGotRich">Contribute</a></nav>
+    </footer>
+  </body>
+</html>
