@@ -6,13 +6,15 @@
   </a>
 </p>
 
-**What 135 conversations reveal about work, ownership, risk, and enough.**
+### From Abundance to Fulfillment and Contentment
 
-*How You Got Rich* brings the School of Hard Knocks interview corpus into one
-continuous inquiry. Success stories are tested against failures, luck,
-starting conditions, incentives, survivorship, and the costs carried by other
-people. The book is practical without promising that another person's route
-to wealth can be copied.
+*How You Got Rich* is a rigorous, candid search for how people become rich,
+how wealth is created, kept, and deployed, and how it can become freedom,
+abundance, fulfillment, and contentment rather than status without an end.
+The School of Hard Knocks interview corpus is its human and evidentiary spine.
+Success stories are tested against failures, luck, starting conditions,
+incentives, survivorship, and costs carried by other people. The book is
+practical without promising that another person's route can simply be copied.
 
 ## A Richer Definition of Wealth
 
@@ -47,6 +49,13 @@ decide how that room should be used.
 | --- | --- | --- |
 | Full size, 162 pages | Print, desktop, and larger tablets | [PDF](editions/how-you-got-rich.pdf) |
 | Pocket 1.2x, 312 pages | Compact screens, e-readers, and 6x9 printing | [PDF](editions/how-you-got-rich-pocket-1.2x.pdf) |
+
+The accepted V2 edition is permanently archived as
+[full size](editions/v2/how-you-got-rich-v2.pdf) and
+[pocket 1.2x](editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). Unversioned
+links always point to the latest accepted edition; publishing a later edition
+does not remove V2. See the [edition policy](VERSIONING.md) for the durable
+version and repository-history rules.
 
 The editable book lives in [`source/`](source/). The cover preview above is
 rendered from page one of the accepted full-size PDF, not from separate cover
@@ -103,7 +112,7 @@ GitHub can export citation formats from [`CITATION.cff`](CITATION.cff).
 ```bibtex
 @book{lazyingart2026howyougotrich,
   author    = {{LazyingArt LLC}},
-  title     = {How You Got Rich: What 135 Conversations Reveal about Work, Ownership, Risk, and Enough},
+  title     = {How You Got Rich: From Abundance to Fulfillment and Contentment},
   year      = {2026},
   publisher = {LazyingArt and LazyLearn},
   url       = {https://github.com/lachlanchen/HowYouGotRich}

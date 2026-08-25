@@ -48,7 +48,8 @@ fi
 
 full_log="$repo_root/build/logs/full-pass-3.log"
 if [[ -f "$full_log" ]]; then
-  test "$(grep -c 'Underfull \\hbox' "$full_log")" -eq 3
+  # Four intentional ragged lines belong to the overlaid full-cover text.
+  test "$(grep -c 'Underfull \\hbox' "$full_log")" -eq 4
   ! grep -Eq 'Overfull|Fatal error|Emergency stop' "$full_log"
 fi
 
