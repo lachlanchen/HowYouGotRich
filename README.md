@@ -50,6 +50,12 @@ decide how that room should be used.
 | Full size, 162 pages | Print, desktop, and larger tablets | [PDF](editions/how-you-got-rich.pdf) |
 | Pocket 1.2x, 312 pages | Compact screens, e-readers, and 6x9 printing | [PDF](editions/how-you-got-rich-pocket-1.2x.pdf) |
 
+The accepted V2 edition is permanently archived as
+[full size](editions/v2/how-you-got-rich-v2.pdf) and
+[pocket 1.2x](editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). Unversioned
+links always point to the latest accepted edition; publishing a later edition
+does not remove V2.
+
 The editable book lives in [`source/`](source/). The cover preview above is
 rendered from page one of the accepted full-size PDF, not from separate cover
 art.
