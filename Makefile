@@ -1,4 +1,4 @@
-.PHONY: all full pocket verify multilingual-prepare multilingual-validate web site verify-site serve
+.PHONY: all full pocket verify multilingual-prepare multilingual-validate multilingual-status web site verify-site serve
 
 all: full pocket
 
@@ -17,6 +17,9 @@ multilingual-prepare:
 multilingual-validate:
 	python3 scripts/prepare_multilingual.py --check
 	python3 scripts/validate_multilingual.py
+
+multilingual-status:
+	python3 scripts/report_multilingual.py
 
 web:
 	python3 scripts/build-web-edition.py

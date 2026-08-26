@@ -1,4 +1,5 @@
 build/
+multilingual/runtime/
 __pycache__/
 *.pyc
 *.aux

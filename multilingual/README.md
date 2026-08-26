@@ -18,6 +18,19 @@ python3 scripts/prepare_multilingual.py
 python3 scripts/prepare_multilingual.py --check
 ```
 
+Translate one reading or inspect resumable progress with:
+
+```sh
+python3 scripts/translate_multilingual.py --entry introduction --dry-run
+python3 scripts/translate_multilingual.py --entry introduction --commit
+make multilingual-status
+```
+
+`scripts/run_multilingual_queue.sh` processes all remaining readings with
+`gpt-5.6-sol` at `xhigh` reasoning by default. Every accepted reading is
+validated, committed, and pushed before the queue advances. Runtime prompts,
+responses, and logs stay under ignored `multilingual/runtime/`.
+
 Generated translations must preserve block structure, equations, image paths,
 URLs, names, numbers, qualifications, and attribution. A target block is not
 publishable until deterministic validation and contextual review both pass.
