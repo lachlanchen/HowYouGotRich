@@ -12,7 +12,7 @@
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
 <p align="center">
-  <a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html">
+  <a href="editions/how-you-got-rich.pdf">
     <img src="assets/cover-page-1.png" alt="How You Got Rich cover" width="520">
   </a>
 </p>

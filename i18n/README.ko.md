@@ -11,7 +11,7 @@
 [![포켓 PDF](https://img.shields.io/badge/PDF-포켓_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/후원-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="How You Got Rich 표지" width="520"></a></p>
+<p align="center"><a href="../editions/how-you-got-rich.pdf"><img src="../assets/cover-page-1.png" alt="How You Got Rich 표지" width="520"></a></p>
 
 *How You Got Rich*는 사람들이 부를 만들고 지키고 사용하는 방식, 그리고
 부가 끝없는 지위 경쟁이 아니라 자유가 되는 방식을 솔직하게 탐구합니다.

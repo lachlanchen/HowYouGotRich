@@ -11,7 +11,7 @@
 [![ポケット PDF](https://img.shields.io/badge/PDF-ポケット_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/支援-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="How You Got Rich の表紙" width="520"></a></p>
+<p align="center"><a href="../editions/how-you-got-rich.pdf"><img src="../assets/cover-page-1.png" alt="How You Got Rich の表紙" width="520"></a></p>
 
 *How You Got Rich* は、人がどのように富を生み、守り、使うのか、そして
 富を終わりのない地位競争ではなく自由へ変えるにはどうすればよいのかを

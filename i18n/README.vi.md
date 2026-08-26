@@ -11,7 +11,7 @@
 [![PDF bỏ túi](https://img.shields.io/badge/PDF-Bỏ_túi_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/Ủng_hộ-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="Bìa How You Got Rich" width="520"></a></p>
+<p align="center"><a href="../editions/how-you-got-rich.pdf"><img src="../assets/cover-page-1.png" alt="Bìa How You Got Rich" width="520"></a></p>
 
 *How You Got Rich* thẳng thắn tìm hiểu cách con người tạo ra, giữ gìn và sử
 dụng của cải, cũng như cách biến của cải thành tự do thay vì một cuộc đua địa

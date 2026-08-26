@@ -11,7 +11,7 @@
 [![PDF de poche](https://img.shields.io/badge/PDF-Poche_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/Soutenir-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="Couverture de How You Got Rich" width="520"></a></p>
+<p align="center"><a href="../editions/how-you-got-rich.pdf"><img src="../assets/cover-page-1.png" alt="Couverture de How You Got Rich" width="520"></a></p>
 
 *How You Got Rich* examine sans détour comment la richesse se crée, se conserve
 et s'emploie, puis comment elle peut devenir une liberté plutôt qu'une quête de

@@ -11,7 +11,7 @@
 [![Карманный PDF](https://img.shields.io/badge/PDF-Карманный_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/Поддержать-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="Обложка How You Got Rich" width="520"></a></p>
+<p align="center"><a href="../editions/how-you-got-rich.pdf"><img src="../assets/cover-page-1.png" alt="Обложка How You Got Rich" width="520"></a></p>
 
 *How You Got Rich* честно исследует, как люди создают, сохраняют и используют
 богатство и как оно может стать свободой, а не бесконечной погоней за статусом.
