@@ -9,6 +9,10 @@ mkdir -p "$verify_dir"
   cd "$repo_root/editions"
   sha256sum -c SHA256SUMS
 )
+(
+  cd "$repo_root/editions/v3"
+  sha256sum -c SHA256SUMS
+)
 
 verify_pdf() {
   local pdf="$1"
@@ -21,7 +25,7 @@ verify_pdf() {
     exit 1
   fi
   pdftotext "$pdf" "$text_path"
-  grep -Fq 'Some costs are reversible' "$text_path"
+  grep -Fq 'The book has five movements' "$text_path"
   grep -Fq 'Mencius treated a stable livelihood' "$text_path"
   if grep -Eiq 'codex|prompt tool|agent session|private conversation|ProjectsLFS|generated_course_notes' "$text_path"; then
     echo "Reader-visible production language detected in $pdf" >&2
@@ -34,6 +38,8 @@ accepted_full="$repo_root/editions/how-you-got-rich.pdf"
 accepted_pocket="$repo_root/editions/how-you-got-rich-pocket-1.2x.pdf"
 verify_pdf "$accepted_full" accepted-full
 verify_pdf "$accepted_pocket" accepted-pocket
+verify_pdf "$repo_root/editions/v3/how-you-got-rich-v3.pdf" archived-v3-full
+verify_pdf "$repo_root/editions/v3/how-you-got-rich-v3-pocket-1.2x.pdf" archived-v3-pocket
 
 built_full="$repo_root/build/full/how-you-got-rich.pdf"
 built_pocket="$repo_root/build/pocket/how-you-got-rich-pocket-1.2x.pdf"

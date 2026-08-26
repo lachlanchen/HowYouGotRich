@@ -6,7 +6,8 @@ authors:
   - name: "LazyingArt LLC"
 repository-code: "https://github.com/lachlanchen/HowYouGotRich"
 url: "https://lachlanchen.github.io/HowYouGotRich/"
-date-released: "2026-08-25"
+version: "3.0.0"
+date-released: "2026-08-26"
 preferred-citation:
   type: book
   title: "How You Got Rich: From Abundance to Fulfillment and Contentment"

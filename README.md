@@ -39,13 +39,14 @@ decide how that room should be used.
 | Book website | Premise, structure, editions, and updates | [Visit](https://lachlanchen.github.io/HowYouGotRich/) |
 | Browser reader | Full book with part and chapter navigation | [Read](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Web edition | A growing, accessible chapter view | [Explore](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| Full-size PDF · 162 pages | Print, desktop, and larger tablets | [Download](editions/how-you-got-rich.pdf) |
-| Pocket 1.2x PDF · 312 pages | E-readers, compact screens, and 6x9 printing | [Download](editions/how-you-got-rich-pocket-1.2x.pdf) |
+| Full-size V3 PDF · 163 pages | Print, desktop, and larger tablets | [Download](editions/how-you-got-rich.pdf) |
+| Pocket V3 1.2x PDF · 349 pages | E-readers, compact screens, and 6x9 printing | [Download](editions/how-you-got-rich-pocket-1.2x.pdf) |
 
-V2 remains permanently available as [full size](editions/v2/how-you-got-rich-v2.pdf)
-and [pocket 1.2x](editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). Unversioned
-links move only when a later edition has passed source, editorial, and layout
-review. See the [edition policy](VERSIONING.md).
+V3 is fixed in its [versioned archive](editions/v3/README.md). V2 remains
+permanently available as [full size](editions/v2/how-you-got-rich-v2.pdf) and
+[pocket 1.2x](editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). Unversioned links
+move only when a later edition has passed source, editorial, and layout review.
+See the [edition policy](VERSIONING.md).
 
 ## The Argument
 
@@ -88,7 +89,7 @@ or endorsement.
 [`sources/interviews.csv`](sources/interviews.csv) identifies all 135 source
 videos and transcript checksums without redistributing the transcripts.
 [`sources/figures.csv`](sources/figures.csv) records timestamped attribution for
-the documentary frames retained in V2.
+the documentary frames retained in the current edition.
 
 ## Collaboration
 

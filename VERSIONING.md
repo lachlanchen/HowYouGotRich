@@ -6,12 +6,14 @@ without losing a known-good book.
 - `editions/how-you-got-rich.pdf` and its pocket counterpart always identify
   the latest accepted edition.
 - `editions/v2/` permanently preserves V2, including checksums.
+- `editions/v3/` permanently preserves V3, including checksums.
 - Future accepted editions receive their own directory, release, and tag before
   the unversioned links move forward.
 - Published edition files are never silently replaced or removed.
 
 GitHub releases provide convenient immutable downloads. The `v2.0.0` release
-contains the full-size and 1.2x pocket V2 PDFs.
+contains the full-size and 1.2x pocket V2 PDFs; `v3.0.0` contains the accepted
+V3 pair.
 
 ## Repository History
 

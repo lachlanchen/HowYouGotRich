@@ -14,3 +14,6 @@ make pocket
 
 Both editions originate from this source. Pocket-specific page geometry and
 typographic adjustments are applied only in a disposable compile copy.
+
+The canonical tree contains the accepted V3 manuscript. The complete V2
+source remains available under [`v2/`](v2/) for direct editorial comparison.

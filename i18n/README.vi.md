@@ -36,8 +36,8 @@ thể quyết định ta nên dùng không gian ấy như thế nào.
 | Trang sách | Tiền đề, cấu trúc, các ấn bản và cập nhật | [Truy cập](https://lachlanchen.github.io/HowYouGotRich/) |
 | Trình đọc web | Toàn bộ sách với điều hướng theo chương | [Đọc](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Ấn bản web | Chế độ đọc chương dễ tiếp cận đang phát triển | [Khám phá](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| PDF đầy đủ · 162 trang | In ấn, máy tính và máy tính bảng lớn | [Tải xuống](../editions/how-you-got-rich.pdf) |
-| PDF bỏ túi 1.2x · 312 trang | Máy đọc sách, màn hình nhỏ và in 6x9 | [Tải xuống](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| PDF đầy đủ · 163 trang | In ấn, máy tính và máy tính bảng lớn | [Tải xuống](../editions/how-you-got-rich.pdf) |
+| PDF bỏ túi 1.2x · 349 trang | Máy đọc sách, màn hình nhỏ và in 6x9 | [Tải xuống](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 V2 luôn được lưu tại bản [đầy đủ](../editions/v2/how-you-got-rich-v2.pdf) và
 [bỏ túi 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). Liên kết không

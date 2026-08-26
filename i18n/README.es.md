@@ -36,8 +36,8 @@ puede decidir cómo debe utilizarse ese espacio.
 | Sitio del libro | Premisa, estructura, ediciones y novedades | [Visitar](https://lachlanchen.github.io/HowYouGotRich/) |
 | Lector web | Libro completo con navegación por capítulos | [Leer](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Edición web | Vista accesible en crecimiento | [Explorar](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| PDF completo · 162 páginas | Impresión, escritorio y tabletas grandes | [Descargar](../editions/how-you-got-rich.pdf) |
-| PDF de bolsillo 1.2x · 312 páginas | Lectores electrónicos, pantallas pequeñas e impresión 6x9 | [Descargar](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| PDF completo · 163 páginas | Impresión, escritorio y tabletas grandes | [Descargar](../editions/how-you-got-rich.pdf) |
+| PDF de bolsillo 1.2x · 349 páginas | Lectores electrónicos, pantallas pequeñas e impresión 6x9 | [Descargar](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 La V2 permanece archivada en [tamaño completo](../editions/v2/how-you-got-rich-v2.pdf)
 y [bolsillo 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). Los enlaces

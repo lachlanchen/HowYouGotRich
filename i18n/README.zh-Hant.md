@@ -34,8 +34,8 @@
 | 圖書網站 | 了解主旨、結構、版本與更新 | [造訪](https://lachlanchen.github.io/HowYouGotRich/) |
 | 瀏覽器閱讀器 | 按部與章節導覽完整圖書 | [閱讀](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | 網頁版 | 持續完善的無障礙章節檢視 | [探索](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| 全尺寸 PDF · 162 頁 | 列印、桌面與大螢幕平板 | [下載](../editions/how-you-got-rich.pdf) |
-| 口袋版 1.2x PDF · 312 頁 | 電子書閱讀器、小螢幕與 6x9 印刷 | [下載](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| 全尺寸 PDF · 163 頁 | 列印、桌面與大螢幕平板 | [下載](../editions/how-you-got-rich.pdf) |
+| 口袋版 1.2x PDF · 349 頁 | 電子書閱讀器、小螢幕與 6x9 印刷 | [下載](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 V2 將永久保留[全尺寸版](../editions/v2/how-you-got-rich-v2.pdf)與
 [口袋版 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf)。不帶版本號

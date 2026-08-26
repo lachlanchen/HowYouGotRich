@@ -35,8 +35,8 @@
 | Сайт книги | Замысел, структура, издания и новости | [Посетить](https://lachlanchen.github.io/HowYouGotRich/) |
 | Веб-ридер | Полная книга с навигацией по главам | [Читать](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Веб-издание | Развивающееся доступное представление | [Открыть](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| Полный PDF · 162 страницы | Печать, компьютер и большой планшет | [Скачать](../editions/how-you-got-rich.pdf) |
-| Карманный PDF 1.2x · 312 страниц | Ридер, небольшой экран и печать 6x9 | [Скачать](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| Полный PDF · 163 страницы | Печать, компьютер и большой планшет | [Скачать](../editions/how-you-got-rich.pdf) |
+| Карманный PDF 1.2x · 349 страниц | Ридер, небольшой экран и печать 6x9 | [Скачать](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 V2 навсегда сохранена в [полном формате](../editions/v2/how-you-got-rich-v2.pdf)
 и [карманном 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). Ссылки

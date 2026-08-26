@@ -36,8 +36,8 @@ trois. Elle ne peut pas décider de l'usage de cet espace.
 | Site du livre | Idée, structure, éditions et actualités | [Visiter](https://lachlanchen.github.io/HowYouGotRich/) |
 | Lecteur web | Livre intégral avec navigation par chapitre | [Lire](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Édition web | Lecture accessible en développement | [Explorer](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| PDF grand format · 162 pages | Impression, ordinateur et grande tablette | [Télécharger](../editions/how-you-got-rich.pdf) |
-| PDF poche 1.2x · 312 pages | Liseuse, petit écran et impression 6x9 | [Télécharger](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| PDF grand format · 163 pages | Impression, ordinateur et grande tablette | [Télécharger](../editions/how-you-got-rich.pdf) |
+| PDF poche 1.2x · 349 pages | Liseuse, petit écran et impression 6x9 | [Télécharger](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 La V2 reste archivée en [grand format](../editions/v2/how-you-got-rich-v2.pdf) et
 en [poche 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). Les liens

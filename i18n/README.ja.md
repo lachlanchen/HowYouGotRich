@@ -35,8 +35,8 @@
 | 書籍サイト | 主題、構成、版、更新情報 | [訪問](https://lachlanchen.github.io/HowYouGotRich/) |
 | ブラウザーリーダー | 章ナビゲーション付き全文 | [読む](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Web 版 | 成長中のアクセシブルな章表示 | [見る](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| フルサイズ PDF · 162ページ | 印刷、デスクトップ、大型タブレット | [ダウンロード](../editions/how-you-got-rich.pdf) |
-| ポケット 1.2x PDF · 312ページ | 電子書籍端末、小型画面、6x9印刷 | [ダウンロード](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| フルサイズ PDF · 163ページ | 印刷、デスクトップ、大型タブレット | [ダウンロード](../editions/how-you-got-rich.pdf) |
+| ポケット 1.2x PDF · 349ページ | 電子書籍端末、小型画面、6x9印刷 | [ダウンロード](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 V2 は[フルサイズ](../editions/v2/how-you-got-rich-v2.pdf)と
 [ポケット 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf)で恒久保存

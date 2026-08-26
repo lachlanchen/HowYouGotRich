@@ -35,8 +35,8 @@ School of Hard Knocks 인터뷰가 인간적이고 증거에 기반한 중심축
 | 책 웹사이트 | 전제, 구조, 판본, 업데이트 | [방문](https://lachlanchen.github.io/HowYouGotRich/) |
 | 브라우저 리더 | 부와 장별 탐색이 가능한 전체 책 | [읽기](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | 웹 판본 | 확장 중인 접근성 높은 장별 보기 | [살펴보기](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| 전체 PDF · 162쪽 | 인쇄, 데스크톱, 큰 태블릿 | [다운로드](../editions/how-you-got-rich.pdf) |
-| 포켓 1.2x PDF · 312쪽 | 전자책 단말기, 작은 화면, 6x9 인쇄 | [다운로드](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| 전체 PDF · 163쪽 | 인쇄, 데스크톱, 큰 태블릿 | [다운로드](../editions/how-you-got-rich.pdf) |
+| 포켓 1.2x PDF · 349쪽 | 전자책 단말기, 작은 화면, 6x9 인쇄 | [다운로드](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 V2는 [전체 판형](../editions/v2/how-you-got-rich-v2.pdf)과
 [포켓 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf)로 영구 보존됩니다.

@@ -35,8 +35,8 @@ School of Hard Knocks العمود الفقري الإنساني والاستد�
 | موقع الكتاب | الفكرة والبنية والإصدارات والتحديثات | [زيارة](https://lachlanchen.github.io/HowYouGotRich/) |
 | قارئ المتصفح | الكتاب كاملا مع تنقل بين الفصول | [قراءة](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | إصدار الويب | عرض فصلي ميسر يتطور تدريجيا | [استكشاف](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| PDF كامل · 162 صفحة | الطباعة والحاسوب والأجهزة اللوحية الكبيرة | [تنزيل](../editions/how-you-got-rich.pdf) |
-| PDF جيب 1.2x · 312 صفحة | القارئات والشاشات الصغيرة وطباعة 6x9 | [تنزيل](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| PDF كامل · 163 صفحة | الطباعة والحاسوب والأجهزة اللوحية الكبيرة | [تنزيل](../editions/how-you-got-rich.pdf) |
+| PDF جيب 1.2x · 349 صفحة | القارئات والشاشات الصغيرة وطباعة 6x9 | [تنزيل](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 يبقى الإصدار V2 محفوظا بالحجم [الكامل](../editions/v2/how-you-got-rich-v2.pdf)
 وبنسخة [الجيب 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf). ولا تنتقل

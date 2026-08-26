@@ -35,8 +35,8 @@ Sie entscheidet nicht, wie dieser Raum genutzt werden soll.
 | Buchwebsite | Grundidee, Aufbau, Ausgaben und Neuigkeiten | [Besuchen](https://lachlanchen.github.io/HowYouGotRich/) |
 | Browser-Reader | Das ganze Buch mit Kapitelnavigation | [Lesen](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Webausgabe | Wachsende barrierearme Kapitelansicht | [Erkunden](https://lachlanchen.github.io/HowYouGotRich/book.html) |
-| Großformat-PDF · 162 Seiten | Druck, Desktop und große Tablets | [Herunterladen](../editions/how-you-got-rich.pdf) |
-| Taschenformat 1.2x · 312 Seiten | E-Reader, kleine Bildschirme und 6x9-Druck | [Herunterladen](../editions/how-you-got-rich-pocket-1.2x.pdf) |
+| Großformat-PDF · 163 Seiten | Druck, Desktop und große Tablets | [Herunterladen](../editions/how-you-got-rich.pdf) |
+| Taschenformat 1.2x · 349 Seiten | E-Reader, kleine Bildschirme und 6x9-Druck | [Herunterladen](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 
 V2 bleibt dauerhaft als [Großformat](../editions/v2/how-you-got-rich-v2.pdf) und
 [Taschenformat 1.2x](../editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf)

@@ -26,6 +26,8 @@ EXPECTED_FILES = {
     "editions/how-you-got-rich-pocket-1.2x.pdf",
     "editions/v2/how-you-got-rich-v2.pdf",
     "editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf",
+    "editions/v3/how-you-got-rich-v3.pdf",
+    "editions/v3/how-you-got-rich-v3-pocket-1.2x.pdf",
 }
 PUBLIC_LEAK_PATTERNS = (
     re.compile(r"\bcodex\b", re.IGNORECASE),
