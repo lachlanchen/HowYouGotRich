@@ -56,7 +56,6 @@ def source_commit() -> str:
             "--",
             "source/book/manuscript",
             "source/book/how-you-got-rich.tex",
-            "docs/data/book.json",
         ],
         cwd=ROOT,
         text=True,

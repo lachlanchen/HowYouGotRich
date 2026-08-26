@@ -45,8 +45,11 @@ make multilingual-pdfs
 make web
 ```
 
-PDF generation uses LuaLaTeX, `luatexja-ruby`, Noto CJK fonts, Pandoc, Poppler,
-and qpdf. The outputs under `editions/languages/` are separate English,
+The accepted aligned corpus is reproducibly checked with Python 3.10 and
+Pandoc 2.12; newer Pandoc releases change block serialization and should be
+treated as an explicit data migration rather than a routine rebuild. PDF
+generation also uses LuaLaTeX, `luatexja-ruby`, Noto CJK fonts, Poppler, and
+qpdf. The outputs under `editions/languages/` are separate English,
 Japanese, and Chinese books plus an aligned EN-JA-ZH maximum-language book,
 each in full-size and 6x9 pocket form. The native reader offers EN, 日本語,
 中文, and Together modes from the same JSON. `make sync-multilingual` copies
