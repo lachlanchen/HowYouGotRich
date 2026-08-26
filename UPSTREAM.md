@@ -3,8 +3,8 @@
 This repository is the curated publication surface for *How You Got Rich*.
 The broader source project is
 [`lachlanchen/LazyEarn`](https://github.com/lachlanchen/LazyEarn). V3 was
-accepted on its evidence-rich `wealth-book-v3` branch; only accepted
-publication milestones are promoted here.
+developed on its evidence-rich `wealth-book-v3` branch and accepted into
+`main`; only accepted publication milestones are promoted here.
 
 The first standalone snapshot was exported from LazyEarn commit
 `f2ea57d09e1f17b189c685923c86938a2d98559c`. The manuscript and accepted PDF
@@ -16,7 +16,8 @@ The accepted rebuilt editions and synchronized publication record were
 exported from commit
 `2866199f4b873da7548798b8df9a70ddd9495bff`.
 The accepted V3 manuscript and reader editions were exported from commit
-`3f2c1a78`.
+`3f2c1a78`. The final publication record and conflict-free integration into
+LazyEarn `main` were completed at commit `5cec4999`.
 
 A publication update should copy only:
 
