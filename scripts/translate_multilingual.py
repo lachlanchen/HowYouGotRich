@@ -221,7 +221,8 @@ def validate_response(
                 )
             continue
         source = source_by_id[record_id]
-        source_words = max(1, len(re.findall(r"\b[\w'-]+\b", source["en"]["markdown"])))
+        source_plain = plain_text_from_block(markdown_block(source["en"]["markdown"]))
+        source_words = len(re.findall(r"\b[\w'-]+\b", source_plain))
         for language in ("ja", "zh"):
             location = f"{record_id}.{language}"
             markdown = accepted[record_id][language]
@@ -239,8 +240,8 @@ def validate_response(
                 errors.append(f"{location}: protected math/link/image/code changed")
             text = plain_text_from_block(block)
             visible = len(re.sub(r"\s+", "", text))
-            minimum = max(1, int(source_words * (0.45 if language == "zh" else 0.7)))
-            if visible < minimum:
+            minimum = int(source_words * (0.45 if language == "zh" else 0.7))
+            if source_plain and visible < max(1, minimum):
                 errors.append(
                     f"{location}: suspiciously short target ({visible} chars for {source_words} source words)"
                 )
@@ -324,6 +325,7 @@ def translate_entry(
     force: bool,
     dry_run: bool,
     commit: bool,
+    response_file: Path | None,
 ) -> bool:
     entry = load_entry(entry_id)
     records = source_records(entry, force)
@@ -336,6 +338,21 @@ def translate_entry(
             f"{entry_id}: {len(records)} records, {len(prompt):,} prompt characters, "
             f"model={model}, reasoning={reasoning}"
         )
+        return True
+
+    if response_file is not None:
+        response = json.loads(response_file.read_text(encoding="utf-8"))
+        errors, accepted = validate_response(entry, records, response)
+        if errors:
+            for error in errors:
+                print(error, file=sys.stderr)
+            return False
+        apply_translations(entry, accepted, model, reasoning)
+        atomic_write_entry(entry)
+        refresh_and_validate(entry_id)
+        if commit:
+            commit_entry(entry)
+        print(f"{entry_id}: accepted saved response with {len(records)} records")
         return True
 
     repair: list[str] = []
@@ -388,12 +405,19 @@ def main() -> int:
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--commit", action="store_true")
+    parser.add_argument(
+        "--response-file",
+        type=Path,
+        help="validate and promote one saved structured response without another model call",
+    )
     parser.add_argument("--continue-on-error", action="store_true")
     args = parser.parse_args()
 
     manifest = load_manifest()
     known = [item["id"] for item in manifest["entries"]]
     entries = known if args.all else args.entry
+    if args.response_file is not None and (args.all or len(entries) != 1):
+        parser.error("--response-file requires exactly one --entry")
     unknown = sorted(set(entries) - set(known))
     if unknown:
         parser.error(f"unknown entries: {', '.join(unknown)}")
@@ -408,6 +432,7 @@ def main() -> int:
             args.force,
             args.dry_run,
             args.commit,
+            args.response_file,
         )
         if not success:
             failed.append(entry_id)
