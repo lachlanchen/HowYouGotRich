@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lachlanchen/HowYouGotRich/blob/main/multilingual/schema.json",
+  "title": "How You Got Rich aligned reading",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "source_path",
+    "source_sha256",
+    "metadata",
+    "block_count",
+    "blocks"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "id": { "type": "string", "minLength": 1 },
+    "kind": { "enum": ["preface", "introduction", "chapter"] },
+    "number": { "type": ["integer", "null"] },
+    "source_path": { "type": "string", "minLength": 1 },
+    "source_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "metadata": {
+      "type": "object",
+      "required": ["source_sha256", "title", "question"]
+    },
+    "block_count": { "type": "integer", "minimum": 1 },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "source_sha256",
+          "structure",
+          "protected",
+          "en",
+          "ja",
+          "zh"
+        ],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "kind": { "type": "string", "minLength": 1 },
+          "source_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "structure": { "type": "object" },
+          "protected": { "type": "array" },
+          "en": { "$ref": "#/$defs/languageBlock" },
+          "ja": { "$ref": "#/$defs/languageBlock" },
+          "zh": { "$ref": "#/$defs/languageBlock" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "languageBlock": {
+      "type": "object",
+      "required": ["status", "markdown", "tokens"],
+      "properties": {
+        "status": { "enum": ["source", "missing", "translated", "reviewed", "stale"] },
+        "markdown": { "type": "string" },
+        "tokens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["t"],
+            "properties": {
+              "t": { "type": "string" },
+              "r": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

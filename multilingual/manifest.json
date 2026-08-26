@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "book_version": "3.0.0",
+  "source_commit": "6d12bb02250bbbf9ac1ad7c2ff9f2aaaf28e174b",
+  "source_commit_time": "2026-08-26T12:11:48+08:00",
+  "title": {
+    "en": "How You Got Rich",
+    "ja": "あなたはいかにして富を築いたか",
+    "zh": "你是如何致富的"
+  },
+  "subtitle": {
+    "en": "From Abundance to Fulfillment and Contentment",
+    "ja": "豊かさから充実、そして「足るを知る」へ",
+    "zh": "从富足到满足与知足"
+  },
+  "author": "LazyingArt · LazyLearn",
+  "languages": [
+    "en",
+    "ja",
+    "zh"
+  ],
+  "parts": [
+    {
+      "number": "I",
+      "title": {
+        "en": "What Money Is For",
+        "ja": "お金は何のためにあるのか",
+        "zh": "金钱为何存在"
+      }
+    },
+    {
+      "number": "II",
+      "title": {
+        "en": "Make Something Valuable",
+        "ja": "価値あるものをつくる",
+        "zh": "创造有价值之物"
+      }
+    },
+    {
+      "number": "III",
+      "title": {
+        "en": "Own the Machine",
+        "ja": "仕組みを所有する",
+        "zh": "拥有运转的系统"
+      }
+    },
+    {
+      "number": "IV",
+      "title": {
+        "en": "Capital, Risk, and Time",
+        "ja": "資本・リスク・時間",
+        "zh": "资本、风险与时间"
+      }
+    },
+    {
+      "number": "V",
+      "title": {
+        "en": "Freedom and Enough",
+        "ja": "自由と「足る」",
+        "zh": "自由与知足"
+      }
+    }
+  ],
+  "entry_count": 25,
+  "block_count": 1164,
+  "reviewed_blocks": {
+    "ja": 0,
+    "zh": 0
+  },
+  "entries": [
+    {
+      "id": "note-on-the-conversations",
+      "kind": "preface",
+      "number": null,
+      "part": null,
+      "path": "entries/note-on-the-conversations.json",
+      "source_sha256": "7c1f2bf60e9470163e0c492f392e9743487b4ebf820db447f23b51bfdab24d67",
+      "block_count": 5
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "number": null,
+      "part": null,
+      "path": "entries/introduction.json",
+      "source_sha256": "2973ac08fd516459f6c2bdb9be5e92a01d67cce93de827077851c79b1e6ec788",
+      "block_count": 21
+    },
+    {
+      "id": "ch01",
+      "kind": "chapter",
+      "number": 1,
+      "part": {
+        "number": "I",
+        "title_en": "What Money Is For"
+      },
+      "path": "entries/ch01.json",
+      "source_sha256": "ebbacb15e8f985e836177474932a92caf603436e14372bc4f95cea93e9423034",
+      "block_count": 56
+    },
+    {
+      "id": "ch02",
+      "kind": "chapter",
+      "number": 2,
+      "part": {
+        "number": "I",
+        "title_en": "What Money Is For"
+      },
+      "path": "entries/ch02.json",
+      "source_sha256": "f9ef7df35b7679050648e19eb3cf2c21b8f287115efd9396a8663f7f80328716",
+      "block_count": 48
+    },
+    {
+      "id": "ch03",
+      "kind": "chapter",
+      "number": 3,
+      "part": {
+        "number": "I",
+        "title_en": "What Money Is For"
+      },
+      "path": "entries/ch03.json",
+      "source_sha256": "a7202fa3af387f1eaf046b545acf3a8534caf8caa9186225c362c25edfd12bf2",
+      "block_count": 50
+    },
+    {
+      "id": "ch04",
+      "kind": "chapter",
+      "number": 4,
+      "part": {
+        "number": "I",
+        "title_en": "What Money Is For"
+      },
+      "path": "entries/ch04.json",
+      "source_sha256": "2af6f90c9969be57dd9ed2e9e97fb8aa3af446b1fd47e0d6d7f122d2428219ae",
+      "block_count": 49
+    },
+    {
+      "id": "ch05",
+      "kind": "chapter",
+      "number": 5,
+      "part": {
+        "number": "II",
+        "title_en": "Make Something Valuable"
+      },
+      "path": "entries/ch05.json",
+      "source_sha256": "0133f77de45b708b56b53186d7c76c98062de3c8357265c36597c6f541557eba",
+      "block_count": 50
+    },
+    {
+      "id": "ch06",
+      "kind": "chapter",
+      "number": 6,
+      "part": {
+        "number": "II",
+        "title_en": "Make Something Valuable"
+      },
+      "path": "entries/ch06.json",
+      "source_sha256": "ea64627a2541eac91e6f303cf5cdb51768e6a5d10534b785a2cdea7be06c618b",
+      "block_count": 59
+    },
+    {
+      "id": "ch07",
+      "kind": "chapter",
+      "number": 7,
+      "part": {
+        "number": "II",
+        "title_en": "Make Something Valuable"
+      },
+      "path": "entries/ch07.json",
+      "source_sha256": "3996780bed22344d51ebd9fbae915ff8ff54c967c8d2379e930c371d58bc5b06",
+      "block_count": 49
+    },
+    {
+      "id": "ch08",
+      "kind": "chapter",
+      "number": 8,
+      "part": {
+        "number": "II",
+        "title_en": "Make Something Valuable"
+      },
+      "path": "entries/ch08.json",
+      "source_sha256": "546694be45cea40a30c1394669ead0998cb6940ecbf07f97856bbe08bbe15f41",
+      "block_count": 55
+    },
+    {
+      "id": "ch09",
+      "kind": "chapter",
+      "number": 9,
+      "part": {
+        "number": "II",
+        "title_en": "Make Something Valuable"
+      },
+      "path": "entries/ch09.json",
+      "source_sha256": "39a966f51d5c001dbb150b33d5b20373e450f417b9eb201dea7ec83674b0b75a",
+      "block_count": 49
+    },
+    {
+      "id": "ch10",
+      "kind": "chapter",
+      "number": 10,
+      "part": {
+        "number": "III",
+        "title_en": "Own the Machine"
+      },
+      "path": "entries/ch10.json",
+      "source_sha256": "0a9f3fca73897df3bc29bb191e7cff250b7fb29bbc4996fb5b46860b8feca020",
+      "block_count": 46
+    },
+    {
+      "id": "ch11",
+      "kind": "chapter",
+      "number": 11,
+      "part": {
+        "number": "III",
+        "title_en": "Own the Machine"
+      },
+      "path": "entries/ch11.json",
+      "source_sha256": "e1e5606ed275f36378fa1ec399324e7cc16e2dc0ff92ffb1532cd78dff6daeca",
+      "block_count": 51
+    },
+    {
+      "id": "ch12",
+      "kind": "chapter",
+      "number": 12,
+      "part": {
+        "number": "III",
+        "title_en": "Own the Machine"
+      },
+      "path": "entries/ch12.json",
+      "source_sha256": "3cc823ed3de157b7c19601cc1531f152870f2dfcc5c933b2d4171608db19aa0e",
+      "block_count": 45
+    },
+    {
+      "id": "ch13",
+      "kind": "chapter",
+      "number": 13,
+      "part": {
+        "number": "III",
+        "title_en": "Own the Machine"
+      },
+      "path": "entries/ch13.json",
+      "source_sha256": "d1fd349f94e9932cafb5965d260c2a44713b464df3cc22e77a0f74d138176046",
+      "block_count": 50
+    },
+    {
+      "id": "ch14",
+      "kind": "chapter",
+      "number": 14,
+      "part": {
+        "number": "III",
+        "title_en": "Own the Machine"
+      },
+      "path": "entries/ch14.json",
+      "source_sha256": "ea8a2ad21ba0e6e86569463ccf5091b41c54ed8afd88af05a9d71fac4d34eb05",
+      "block_count": 56
+    },
+    {
+      "id": "ch15",
+      "kind": "chapter",
+      "number": 15,
+      "part": {
+        "number": "III",
+        "title_en": "Own the Machine"
+      },
+      "path": "entries/ch15.json",
+      "source_sha256": "be2af64a3d47f3a19d54a9e2061f18b960748760de86ea3fbfbb78e723105b6d",
+      "block_count": 50
+    },
+    {
+      "id": "ch16",
+      "kind": "chapter",
+      "number": 16,
+      "part": {
+        "number": "IV",
+        "title_en": "Capital, Risk, and Time"
+      },
+      "path": "entries/ch16.json",
+      "source_sha256": "3ab2ecd672982f6d10bb09f07c2aab52677162a10aa241c5731625021a6f4b52",
+      "block_count": 43
+    },
+    {
+      "id": "ch17",
+      "kind": "chapter",
+      "number": 17,
+      "part": {
+        "number": "IV",
+        "title_en": "Capital, Risk, and Time"
+      },
+      "path": "entries/ch17.json",
+      "source_sha256": "7f3691247b46130ff204db872215a0630ee051bcac6b0e120b41efad2c169f18",
+      "block_count": 41
+    },
+    {
+      "id": "ch18",
+      "kind": "chapter",
+      "number": 18,
+      "part": {
+        "number": "IV",
+        "title_en": "Capital, Risk, and Time"
+      },
+      "path": "entries/ch18.json",
+      "source_sha256": "50c6d08753210911435ece179f66cf4c74441a1dc44f3480f1d5752dca1872e9",
+      "block_count": 54
+    },
+    {
+      "id": "ch19",
+      "kind": "chapter",
+      "number": 19,
+      "part": {
+        "number": "IV",
+        "title_en": "Capital, Risk, and Time"
+      },
+      "path": "entries/ch19.json",
+      "source_sha256": "fdda42296db478607eaf0b7d650ae35095d2240b7acaba2f1e6f052c9f5e647d",
+      "block_count": 40
+    },
+    {
+      "id": "ch20",
+      "kind": "chapter",
+      "number": 20,
+      "part": {
+        "number": "IV",
+        "title_en": "Capital, Risk, and Time"
+      },
+      "path": "entries/ch20.json",
+      "source_sha256": "839b4ede818515bc5f440f586b83c5a3a8d849b6b04b6b4b85344272f7b2b897",
+      "block_count": 46
+    },
+    {
+      "id": "ch21",
+      "kind": "chapter",
+      "number": 21,
+      "part": {
+        "number": "V",
+        "title_en": "Freedom and Enough"
+      },
+      "path": "entries/ch21.json",
+      "source_sha256": "9757998ffa386c3cda9b3aa92bd1e19f7fd0941fa97fe01d2faf36420665b2e3",
+      "block_count": 45
+    },
+    {
+      "id": "ch22",
+      "kind": "chapter",
+      "number": 22,
+      "part": {
+        "number": "V",
+        "title_en": "Freedom and Enough"
+      },
+      "path": "entries/ch22.json",
+      "source_sha256": "94c0eba73e7b2f97528f86279372732d3558e8cbbe7cad74e1e2b73da9ea53fd",
+      "block_count": 49
+    },
+    {
+      "id": "ch23",
+      "kind": "chapter",
+      "number": 23,
+      "part": {
+        "number": "V",
+        "title_en": "Freedom and Enough"
+      },
+      "path": "entries/ch23.json",
+      "source_sha256": "d7bd9a8c04e4051e9647ba8bf16f5de7e2746e587728a2af7d30de0b6a96a77c",
+      "block_count": 57
+    }
+  ]
+}

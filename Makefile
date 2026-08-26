@@ -1,4 +1,4 @@
-.PHONY: all full pocket verify web site verify-site serve
+.PHONY: all full pocket verify multilingual-prepare multilingual-validate web site verify-site serve
 
 all: full pocket
 
@@ -10,6 +10,13 @@ pocket:
 
 verify:
 	./scripts/verify.sh
+
+multilingual-prepare:
+	python3 scripts/prepare_multilingual.py
+
+multilingual-validate:
+	python3 scripts/prepare_multilingual.py --check
+	python3 scripts/validate_multilingual.py
 
 web:
 	python3 scripts/build-web-edition.py

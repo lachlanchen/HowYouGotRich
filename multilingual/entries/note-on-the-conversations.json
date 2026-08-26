@@ -1,0 +1,2982 @@
+{
+  "schema_version": 1,
+  "id": "note-on-the-conversations",
+  "kind": "preface",
+  "number": null,
+  "part": null,
+  "source_path": "source/book/manuscript/frontmatter.tex",
+  "source_sha256": "7c1f2bf60e9470163e0c492f392e9743487b4ebf820db447f23b51bfdab24d67",
+  "metadata": {
+    "source_sha256": "f029ff47b750f9fedebb62258c6315ff2f7cbb4fbb3a6abde1d5655cb59b5363",
+    "title": {
+      "en": "A Note on the Conversations",
+      "ja": "",
+      "zh": ""
+    },
+    "question": {
+      "en": "How should success stories be read without turning experience into law?",
+      "ja": "",
+      "zh": ""
+    }
+  },
+  "block_count": 5,
+  "blocks": [
+    {
+      "id": "note-on-the-conversations-b0001",
+      "kind": "Para",
+      "source_sha256": "0bdd12cf60be1875ed29013238c2d6690953558d28774ae9da98dcadbf895b4e",
+      "structure": {
+        "type": "Para"
+      },
+      "protected": [],
+      "en": {
+        "status": "source",
+        "markdown": "The question sounds almost childlike: *How did you get rich?* James Dumoulin asks it outside hotels, at conferences, beside parked cars, on city streets, and in longer seated conversations. Some people walk away. Some give a sentence polished by years of repetition. Others begin with the answer they expected to give and, under a second or third question, arrive somewhere more revealing: a missed payroll, a marriage under strain, a lucky investment, a customer complaint, a partner who carried the work, or the strange emptiness that followed a long-awaited exit.",
+        "tokens": [
+          {
+            "t": "The"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "question"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "sounds"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "almost"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "childlike"
+          },
+          {
+            "t": ":"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "How"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "did"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "you"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "get"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "rich"
+          },
+          {
+            "t": "?"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "James"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Dumoulin"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "asks"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "it"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "outside"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "hotels"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "at"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "conferences"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "beside"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "parked"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "cars"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "on"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "city"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "streets"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "in"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "longer"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "seated"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "conversations"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Some"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "people"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "walk"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "away"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Some"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "give"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "sentence"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "polished"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "by"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "years"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "of"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "repetition"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Others"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "begin"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "with"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "answer"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "they"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "expected"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "give"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "under"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "second"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "or"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "third"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "question"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "arrive"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "somewhere"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "more"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "revealing"
+          },
+          {
+            "t": ":"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "missed"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "payroll"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "marriage"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "under"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "strain"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "lucky"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "investment"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "customer"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "complaint"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "partner"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "who"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "carried"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "work"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "or"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "strange"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "emptiness"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "that"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "followed"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "long-awaited"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "exit"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      "ja": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      },
+      "zh": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      }
+    },
+    {
+      "id": "note-on-the-conversations-b0002",
+      "kind": "Para",
+      "source_sha256": "0e72964fa272f64792c8c544813af88648e6d9a120fe21daad8b9bdda9f2c8cb",
+      "structure": {
+        "type": "Para"
+      },
+      "protected": [],
+      "en": {
+        "status": "source",
+        "markdown": "This book draws from 135 interview videos and compilations in the collection. It does not treat them as a vote in which the most repeated advice becomes true. The people who survived, sold, compounded, inherited, recovered, or happened to be visible on the day of filming are an unusual group. Their memories are selective. Their explanations are shaped by personality, incentives, hindsight, and the format of the encounter. A founder describing one decisive risk cannot show us all the people who took a similar risk and disappeared from view.",
+        "tokens": [
+          {
+            "t": "This"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "book"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "draws"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "from"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "135"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "interview"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "videos"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "compilations"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "in"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "collection"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "It"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "does"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "not"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "treat"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "them"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "as"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "vote"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "in"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "which"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "most"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "repeated"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "advice"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "becomes"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "true"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "The"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "people"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "who"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "survived"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "sold"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "compounded"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "inherited"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "recovered"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "or"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "happened"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "be"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "visible"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "on"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "day"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "of"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "filming"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "are"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "an"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "unusual"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "group"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Their"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "memories"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "are"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "selective"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Their"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "explanations"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "are"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "shaped"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "by"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "personality"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "incentives"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "hindsight"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "format"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "of"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "encounter"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "A"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "founder"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "describing"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "one"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "decisive"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "risk"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "cannot"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "show"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "us"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "all"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "people"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "who"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "took"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "similar"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "risk"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "disappeared"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "from"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "view"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      "ja": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      },
+      "zh": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      }
+    },
+    {
+      "id": "note-on-the-conversations-b0003",
+      "kind": "Para",
+      "source_sha256": "23ca7632b9fc95e51bc6d3a7f2fb9c41a0adaf5bb3ef4e3f45309257e0e289b0",
+      "structure": {
+        "type": "Para"
+      },
+      "protected": [],
+      "en": {
+        "status": "source",
+        "markdown": "That does not make the stories useless. Experience contains mechanisms that a slogan hides. A large sale can reveal why a buyer valued a customer base. A failed partnership can expose missing decision rights. A property story can show the delay between rent, debt service, repairs, and usable cash. A person who says money did not buy happiness may, in the next breath, remember exactly what it meant to stop fearing the bills. The task is to preserve those particulars while refusing the easy promise that another person's path can be copied whole.",
+        "tokens": [
+          {
+            "t": "That"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "does"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "not"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "make"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "stories"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "useless"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Experience"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "contains"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "mechanisms"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "that"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "slogan"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "hides"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "A"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "large"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "sale"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "can"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "reveal"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "why"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "buyer"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "valued"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "customer"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "base"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "A"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "failed"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "partnership"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "can"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "expose"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "missing"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "decision"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "rights"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "A"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "property"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "story"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "can"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "show"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "delay"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "between"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "rent"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "debt"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "service"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "repairs"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "usable"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "cash"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "A"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "person"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "who"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "says"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "money"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "did"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "not"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "buy"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "happiness"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "may"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "in"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "next"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "breath"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "remember"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "exactly"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "what"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "it"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "meant"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "stop"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "fearing"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "bills"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "The"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "task"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "is"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "preserve"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "those"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "particulars"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "while"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "refusing"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "easy"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "promise"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "that"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "another"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "person’s"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "path"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "can"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "be"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "copied"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "whole"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      "ja": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      },
+      "zh": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      }
+    },
+    {
+      "id": "note-on-the-conversations-b0004",
+      "kind": "Para",
+      "source_sha256": "120265c84aae1d3d03a93417614f8963e2ae95934cd2549469f252e9daeb0a78",
+      "structure": {
+        "type": "Para"
+      },
+      "protected": [],
+      "en": {
+        "status": "source",
+        "markdown": "Stories in these pages are therefore paraphrased unless quotation marks make a checked quotation explicit. Numbers reported in an interview are identified as reported amounts, and company revenue is never silently converted into personal income. When a claim depends on current law, regulation, product terms, or market conditions, the book explains the governing question rather than pretending an old answer remains universal. Sensitive personal histories are used sparingly and only when they carry a necessary lesson.",
+        "tokens": [
+          {
+            "t": "Stories"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "in"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "these"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "pages"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "are"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "therefore"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "paraphrased"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "unless"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "quotation"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "marks"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "make"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "checked"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "quotation"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "explicit"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Numbers"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "reported"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "in"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "an"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "interview"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "are"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "identified"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "as"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "reported"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "amounts"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "company"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "revenue"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "is"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "never"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "silently"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "converted"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "into"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "personal"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "income"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "When"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "claim"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "depends"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "on"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "current"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "law"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "regulation"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "product"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "terms"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "or"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "market"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "conditions"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "book"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "explains"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "governing"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "question"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "rather"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "than"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "pretending"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "an"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "old"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "answer"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "remains"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "universal"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Sensitive"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "personal"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "histories"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "are"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "used"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "sparingly"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "only"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "when"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "they"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "carry"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "necessary"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "lesson"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      "ja": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      },
+      "zh": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      }
+    },
+    {
+      "id": "note-on-the-conversations-b0005",
+      "kind": "Para",
+      "source_sha256": "df07bb0170d8ab958d0f316edb9c22ab5a67abd6b6789212b750c40d9ec9d790",
+      "structure": {
+        "type": "Para"
+      },
+      "protected": [],
+      "en": {
+        "status": "source",
+        "markdown": "The interviews belong to School of Hard Knocks and to the people who chose to speak. The arrangement here belongs to a different project: to ask what their stories reveal when they are allowed to disagree with one another. The result is neither a verbatim record nor a gallery of successful people. It is an argument about the kind of wealth that can support a life without taking that life over: enough resources and options to live abundantly, purposes that make effort feel worthwhile, and the freedom to recognize when more is no longer the answer.",
+        "tokens": [
+          {
+            "t": "The"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "interviews"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "belong"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "School"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "of"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Hard"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "Knocks"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "people"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "who"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "chose"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "speak"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "The"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "arrangement"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "here"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "belongs"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "different"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "project"
+          },
+          {
+            "t": ":"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "ask"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "what"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "their"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "stories"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "reveal"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "when"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "they"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "are"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "allowed"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "disagree"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "with"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "one"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "another"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "The"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "result"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "is"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "neither"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "verbatim"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "record"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "nor"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "gallery"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "of"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "successful"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "people"
+          },
+          {
+            "t": "."
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "It"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "is"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "an"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "argument"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "about"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "kind"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "of"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "wealth"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "that"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "can"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "support"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "a"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "life"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "without"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "taking"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "that"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "life"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "over"
+          },
+          {
+            "t": ":"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "enough"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "resources"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "options"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "live"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "abundantly"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "purposes"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "that"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "make"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "effort"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "feel"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "worthwhile"
+          },
+          {
+            "t": ","
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "and"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "freedom"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "to"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "recognize"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "when"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "more"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "is"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "no"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "longer"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "the"
+          },
+          {
+            "t": " "
+          },
+          {
+            "t": "answer"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      "ja": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      },
+      "zh": {
+        "status": "missing",
+        "markdown": "",
+        "tokens": []
+      }
+    }
+  ]
+}
