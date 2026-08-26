@@ -9,6 +9,9 @@
 [![Read online](https://img.shields.io/badge/Read-Online-B94A2F?style=for-the-badge&logo=readme&logoColor=white)](https://lachlanchen.github.io/HowYouGotRich/)
 [![Full PDF](https://img.shields.io/badge/PDF-Full_Size-18332F?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](editions/how-you-got-rich.pdf)
 [![Pocket PDF](https://img.shields.io/badge/PDF-Pocket_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](editions/how-you-got-rich-pocket-1.2x.pdf)
+[![日本語 PDF](https://img.shields.io/badge/PDF-日本語-335F57?style=for-the-badge&logo=bookstack&logoColor=white)](editions/languages/how-you-got-rich-ja.pdf)
+[![中文 PDF](https://img.shields.io/badge/PDF-中文-8A3B29?style=for-the-badge&logo=bookstack&logoColor=white)](editions/languages/how-you-got-rich-zh.pdf)
+[![EN JA ZH](https://img.shields.io/badge/PDF-EN_·_JA_·_ZH-9A783D?style=for-the-badge&logo=bookstack&logoColor=white)](editions/languages/how-you-got-rich-en-ja-zh.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
 <p align="center">
@@ -36,11 +39,18 @@ decide how that room should be used.
 
 | Format | Best for | Open |
 | --- | --- | --- |
-| Native web book | Complete searchable prose, equations, figures, and chapter navigation | [Read](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
+| Native web book | Complete searchable EN, 日本語, 中文, or aligned Together reading with ruby annotations | [Read](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
 | Book map | Search all prose or browse the five-part argument | [Explore](https://lachlanchen.github.io/HowYouGotRich/book.html) |
 | PDF editions | Optional browser, print, and download formats | [Open](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Full-size V3 PDF · 163 pages | Print, desktop, and larger tablets | [Download](editions/how-you-got-rich.pdf) |
 | Pocket V3 1.2x PDF · 349 pages | E-readers, compact screens, and 6x9 printing | [Download](editions/how-you-got-rich-pocket-1.2x.pdf) |
+| 日本語 · 186 / 326 pages | Japanese text with furigana over kanji | [Full](editions/languages/how-you-got-rich-ja.pdf) · [Pocket](editions/languages/how-you-got-rich-ja-pocket-1.2x.pdf) |
+| 中文 · 167 / 270 pages | Simplified Chinese text with pinyin | [Full](editions/languages/how-you-got-rich-zh.pdf) · [Pocket](editions/languages/how-you-got-rich-zh-pocket-1.2x.pdf) |
+| EN · 日本語 · 中文 · 520 / 931 pages | Maximum-language edition aligned block by block | [Full](editions/languages/how-you-got-rich-en-ja-zh.pdf) · [Pocket](editions/languages/how-you-got-rich-en-ja-zh-pocket-1.2x.pdf) |
+
+The reviewed [aligned JSON source](multilingual/entries/) preserves all 1,164
+English blocks with their Japanese and Chinese counterparts, source hashes,
+protected equations and figures, plus deterministic furigana and pinyin tokens.
 
 V3 is fixed in its [versioned archive](editions/v3/README.md). V2 remains
 permanently available as [full size](editions/v2/how-you-got-rich-v2.pdf) and
@@ -65,14 +75,16 @@ route can simply be copied.
 
 ## Build and Verify
 
-Install TeX Live with `pdflatex`, plus `pandoc`, `python3`, `rsync`, Poppler,
-and `qpdf`.
+Install TeX Live with `pdflatex` and LuaLaTeX (`luatexja-ruby` for annotated
+CJK editions), plus `pandoc`, `python3`, `rsync`, Poppler, and `qpdf`. Python
+annotation dependencies are pinned in `requirements-multilingual.txt`.
 
 ```bash
 make full          # full-size PDF
 make pocket        # 6x9 pocket PDF
 make verify        # publication checks
-make web           # regenerate native HTML from accepted TeX
+make multilingual-pdfs # build EN, JA, ZH, and aligned PDF editions
+make web           # regenerate native multilingual HTML
 make site          # assemble the native website and PDF downloads
 make verify-site   # validate source parity, prose, navigation, and assets
 make serve         # preview at http://localhost:8000

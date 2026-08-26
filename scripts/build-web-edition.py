@@ -11,8 +11,12 @@ import re
 import shutil
 import subprocess
 from dataclasses import dataclass
+from functools import lru_cache
 from html.parser import HTMLParser
 from pathlib import Path
+
+from multilingual_common import load_entry
+from multilingual_render import annotate_html, render_html_blocks
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,6 +29,8 @@ BOOK_DATA_PATH = DOCS / "data" / "book.json"
 WEB_MANIFEST_PATH = DOCS / "data" / "web-edition.json"
 SEARCH_INDEX_PATH = DOCS / "data" / "search-index.json"
 SITE_URL = "https://lachlanchen.github.io/HowYouGotRich"
+LANGUAGES = ("en", "ja", "zh")
+LANGUAGE_LABELS = {"en": "EN", "ja": "日本語", "zh": "中文"}
 
 
 @dataclass(frozen=True)
@@ -65,6 +71,89 @@ def plain_text(fragment: str) -> str:
 
 def word_count(fragment: str) -> int:
     return len(re.findall(r"\b[\w’'-]+\b", plain_text(fragment), re.UNICODE))
+
+
+@lru_cache(maxsize=None)
+def aligned_entry(slug: str) -> dict:
+    return load_entry(slug)
+
+
+def localized_inline(value: str, language: str) -> str:
+    escaped = html.escape(value, quote=False)
+    return escaped if language == "en" else annotate_html(escaped, language)
+
+
+def localized_layers(values: dict[str, str], *, element: str = "span") -> str:
+    return "".join(
+        f'<{element} class="localized-layer" data-language="{language}" '
+        f'lang="{language}">{localized_inline(values[language], language)}</{element}>'
+        for language in LANGUAGES
+    )
+
+
+def figure_with_translated_captions(rendered: dict[str, str]) -> str:
+    figure = rendered["en"]
+    captions: list[str] = []
+    for language in ("ja", "zh"):
+        match = re.search(r"<figcaption>(.*?)</figcaption>", rendered[language], re.DOTALL)
+        if match:
+            captions.append(
+                f'<p class="translated-caption" lang="{language}" '
+                f'data-language="{language}"><strong>{LANGUAGE_LABELS[language]}</strong> '
+                f'{match.group(1)}</p>'
+            )
+    if captions and "</figure>" in figure:
+        figure = figure.rsplit("</figure>", 1)[0]
+        figure += '<div class="figure-caption-translations">' + "".join(captions)
+        figure += "</div></figure>"
+    return figure
+
+
+def multilingual_fragment(entry_data: dict) -> tuple[str, dict[str, dict[str, str]]]:
+    rendered = {
+        language: render_html_blocks(entry_data, language) for language in LANGUAGES
+    }
+    units: list[str] = []
+    for block in entry_data["blocks"]:
+        block_id = str(block["id"])
+        fragments = {language: rendered[language][block_id] for language in LANGUAGES}
+        protected = {str(item.get("type")) for item in block.get("protected", [])}
+        classes = ["aligned-block", f'aligned-{str(block["kind"]).lower()}']
+        anchor = ""
+        heading = re.search(r'<h[1-6] id="([^"]+)"', fragments["en"])
+        if heading:
+            anchor = f' id="{html.escape(heading.group(1), quote=True)}"'
+            fragments = {
+                language: re.sub(r'(<h[1-6]) id="[^"]+"', r"\1", fragment, count=1)
+                for language, fragment in fragments.items()
+            }
+
+        if "image" in protected:
+            classes.append("aligned-figure")
+            content = (
+                '<div class="language-layer language-shared" data-language="shared">'
+                + figure_with_translated_captions(fragments)
+                + "</div>"
+            )
+        elif protected == {"math"} and len({block[code]["markdown"] for code in LANGUAGES}) == 1:
+            classes.append("aligned-shared")
+            content = (
+                '<div class="language-layer language-shared" data-language="shared">'
+                + fragments["en"]
+                + "</div>"
+            )
+        else:
+            content = "".join(
+                f'<div class="language-layer language-{language}" '
+                f'data-language="{language}" data-label="{LANGUAGE_LABELS[language]}" '
+                f'lang="{language}">{fragments[language]}</div>'
+                for language in LANGUAGES
+            )
+        units.append(
+            f'<section class="{" ".join(classes)}" data-block-id="{block_id}"{anchor}>'
+            f"{content}</section>"
+        )
+    return "\n".join(units), rendered
 
 
 def choose_responsive_tex(source: str) -> str:
@@ -142,6 +231,7 @@ def heading_sections(fragment: str, entry: Entry) -> list[dict[str, str]]:
                 "section": "Opening",
                 "href": f"chapters/{entry.slug}.html",
                 "text": opening,
+                "language": "en",
             }
         )
 
@@ -153,6 +243,7 @@ def heading_sections(fragment: str, entry: Entry) -> list[dict[str, str]]:
                 "section": plain_text(match.group(2)),
                 "href": f"chapters/{entry.slug}.html#{match.group(1)}",
                 "text": plain_text(fragment[match.end() : end]),
+                "language": "en",
             }
         )
     return records
@@ -190,11 +281,17 @@ def build_contents(entries: list[Entry], current: Entry, parts: list[dict]) -> s
         active = entry.slug == current.slug
         active_class = " active" if active else ""
         current_attr = ' aria-current="page"' if active else ""
-        search = html.escape(f"{entry.title} {entry.question}".lower(), quote=True)
+        metadata = aligned_entry(entry.slug)["metadata"]
+        search = html.escape(
+            " ".join(metadata["title"].values()).lower()
+            + " "
+            + " ".join(metadata["question"].values()).lower(),
+            quote=True,
+        )
         return (
             f'<a class="web-toc-entry{active_class}" href="{entry_href(entry)}"'
             f' data-search="{search}"{current_attr}>'
-            f'<span>{number}</span><strong>{html.escape(entry.title)}</strong></a>'
+            f'<span>{number}</span><strong>{localized_layers(metadata["title"])}</strong></a>'
         )
 
     groups = [
@@ -220,28 +317,39 @@ def build_contents(entries: list[Entry], current: Entry, parts: list[dict]) -> s
 def page_template(
     entry: Entry,
     fragment: str,
+    navigation_fragment: str,
     entries: list[Entry],
     parts: list[dict],
 ) -> str:
     index = entries.index(entry)
     previous = entries[index - 1] if index else None
     following = entries[index + 1] if index + 1 < len(entries) else None
-    words = word_count(fragment)
+    words = word_count(navigation_fragment)
     minutes = max(1, math.ceil(words / 230))
     position = index + 1
     eyebrow = entry.label
     if entry.part_number:
         eyebrow = f"PART {entry.part_number} · {entry.part_title}"
 
+    previous_title = (
+        localized_layers(aligned_entry(previous.slug)["metadata"]["title"])
+        if previous
+        else ""
+    )
+    following_title = (
+        localized_layers(aligned_entry(following.slug)["metadata"]["title"])
+        if following
+        else ""
+    )
     previous_link = (
         f'<a class="chapter-nav-link previous" href="{entry_href(previous)}">'
-        f'<span>PREVIOUS</span><strong>{html.escape(previous.title)}</strong></a>'
+        f'<span>PREVIOUS</span><strong>{previous_title}</strong></a>'
         if previous
         else '<span class="chapter-nav-spacer"></span>'
     )
     next_link = (
         f'<a class="chapter-nav-link next" href="{entry_href(following)}">'
-        f'<span>NEXT</span><strong>{html.escape(following.title)}</strong></a>'
+        f'<span>NEXT</span><strong>{following_title}</strong></a>'
         if following
         else (
             '<a class="chapter-nav-link next" href="../book.html">'
@@ -250,18 +358,15 @@ def page_template(
     )
     continue_link = (
         f'<a href="{entry_href(following)}"><span>CONTINUE READING</span>'
-        f'<strong>{html.escape(following.title)}</strong><b aria-hidden="true">→</b></a>'
+        f'<strong>{following_title}</strong><b aria-hidden="true">→</b></a>'
         if following
         else (
             '<a href="../book.html"><span>THE END</span>'
             '<strong>Return to the complete argument</strong><b aria-hidden="true">→</b></a>'
         )
     )
-    question = (
-        f'<p class="chapter-question">{html.escape(entry.question)}</p>'
-        if entry.question
-        else ""
-    )
+    metadata = aligned_entry(entry.slug)["metadata"]
+    question = f'<p class="chapter-question">{localized_layers(metadata["question"])}</p>'
     description = entry.question or "Read the native HTML edition of How You Got Rich."
     schema = json.dumps(
         {
@@ -294,7 +399,7 @@ def page_template(
     <link rel="canonical" href="{SITE_URL}/chapters/{entry.slug}.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <script type="application/ld+json">{schema}</script>
@@ -308,7 +413,7 @@ def page_template(
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <script src="../web-reader.js" defer></script>
   </head>
-  <body class="native-reader-page" data-page="{html.escape(entry.slug, quote=True)}">
+  <body class="native-reader-page" data-page="{html.escape(entry.slug, quote=True)}" data-language-mode="en">
     <a class="skip-link" href="#chapter-main">Skip to the chapter</a>
     <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
     <header class="site-header compact reading-site-header">
@@ -330,7 +435,7 @@ def page_template(
           <label for="web-toc-search">Find a chapter</label>
           <input id="web-toc-search" type="search" placeholder="Value, risk, enough…" autocomplete="off">
         </header>
-        {section_navigation(fragment)}
+        {section_navigation(navigation_fragment)}
         <nav class="web-toc-list" aria-label="Chapters">
           {build_contents(entries, entry, parts)}
         </nav>
@@ -340,12 +445,19 @@ def page_template(
         <article class="native-chapter">
           <header class="chapter-masthead">
             <p class="eyebrow">{html.escape(eyebrow)}</p>
-            <h1>{html.escape(entry.title)}</h1>
+            <h1>{localized_layers(metadata["title"])}</h1>
             {question}
             <div class="chapter-meta">
               <span>{minutes} MIN READ</span>
               <span>{position} OF {len(entries)}</span>
               <span>V3 WEB EDITION</span>
+            </div>
+            <div class="language-switcher" role="group" aria-label="Reading language">
+              <span>READ IN</span>
+              <button type="button" data-language-option="en" aria-pressed="true">EN</button>
+              <button type="button" data-language-option="ja" aria-pressed="false">日本語</button>
+              <button type="button" data-language-option="zh" aria-pressed="false">中文</button>
+              <button type="button" data-language-option="all" aria-pressed="false">Together</button>
             </div>
           </header>
           <div class="chapter-body">
@@ -439,12 +551,26 @@ def main() -> int:
     manifest_entries: list[dict] = []
     search_records: list[dict[str, str]] = []
     for entry in entries:
-        fragment = polish_fragment(pandoc_fragment(entry.source_text), figure_names)
-        page = page_template(entry, fragment, entries, book["parts"])
+        entry_data = aligned_entry(entry.slug)
+        fragment, rendered = multilingual_fragment(entry_data)
+        english_fragment = "\n".join(
+            rendered["en"][str(block["id"])] for block in entry_data["blocks"]
+        )
+        page = page_template(entry, fragment, english_fragment, entries, book["parts"])
         output_path = CHAPTER_OUTPUT / f"{entry.slug}.html"
         output_path.write_text(page, encoding="utf-8")
-        sections = heading_sections(fragment, entry)
+        sections = heading_sections(english_fragment, entry)
         search_records.extend(sections)
+        for language in ("ja", "zh"):
+            search_records.append(
+                {
+                    "chapter": entry_data["metadata"]["title"][language],
+                    "section": "全文",
+                    "href": f"chapters/{entry.slug}.html?lang={language}",
+                    "text": plain_text(" ".join(rendered[language].values())),
+                    "language": language,
+                }
+            )
         manifest_entries.append(
             {
                 "slug": entry.slug,
@@ -453,12 +579,13 @@ def main() -> int:
                 "sourceSha256": digest_bytes(entry.source_path.read_bytes()),
                 "output": str(output_path.relative_to(DOCS)),
                 "outputSha256": digest_text(page),
-                "words": word_count(fragment),
+                "words": word_count(english_fragment),
+                "alignedBlocks": len(entry_data["blocks"]),
                 "sections": len(sections),
-                "displayMath": fragment.count('class="math display"'),
-                "inlineMath": fragment.count('class="math inline"'),
-                "figures": len(re.findall(r'src="\.\./assets/figures/[^"]+"', fragment)),
-                "tables": fragment.count("<table>"),
+                "displayMath": english_fragment.count('class="math display"'),
+                "inlineMath": english_fragment.count('class="math inline"'),
+                "figures": len(re.findall(r'src="\.\./assets/figures/[^"]+"', english_fragment)),
+                "tables": english_fragment.count("<table>"),
             }
         )
 
@@ -466,9 +593,12 @@ def main() -> int:
         "title": book["title"],
         "bookVersion": book["version"],
         "generator": "scripts/build-web-edition.py",
-        "sourceFormat": "LaTeX",
+        "sourceFormat": "aligned Markdown derived from accepted V3 LaTeX",
+        "languages": list(LANGUAGES),
+        "languageModes": ["en", "ja", "zh", "all"],
         "entryCount": len(entries),
         "totalWords": sum(entry["words"] for entry in manifest_entries),
+        "alignedBlocks": sum(entry["alignedBlocks"] for entry in manifest_entries),
         "entries": manifest_entries,
         "figures": sorted(figure_names),
     }

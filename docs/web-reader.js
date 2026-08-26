@@ -1,6 +1,52 @@
 "use strict";
 
 const READING_STATE_KEY = "how-you-got-rich:web-reading-state";
+const LANGUAGE_STATE_KEY = "how-you-got-rich:reading-language";
+const LANGUAGE_MODES = new Set(["en", "ja", "zh", "all"]);
+
+function setupLanguageSwitcher() {
+  const buttons = [...document.querySelectorAll("[data-language-option]")];
+  if (!buttons.length) return;
+
+  const requested = new URLSearchParams(window.location.search).get("lang");
+  let remembered = "";
+  try {
+    remembered = window.localStorage.getItem(LANGUAGE_STATE_KEY) || "";
+  } catch {
+    // The reader remains usable when storage is disabled.
+  }
+  const initial = LANGUAGE_MODES.has(requested)
+    ? requested
+    : LANGUAGE_MODES.has(remembered)
+      ? remembered
+      : "en";
+
+  const setMode = (mode, persist = true) => {
+    if (!LANGUAGE_MODES.has(mode)) return;
+    document.body.dataset.languageMode = mode;
+    document.documentElement.lang = mode === "all" ? "en" : mode;
+    for (const button of buttons) {
+      button.setAttribute("aria-pressed", String(button.dataset.languageOption === mode));
+    }
+    if (persist) {
+      try {
+        window.localStorage.setItem(LANGUAGE_STATE_KEY, mode);
+      } catch {
+        // A private browsing policy may disable local storage.
+      }
+      const url = new URL(window.location.href);
+      if (mode === "en") url.searchParams.delete("lang");
+      else url.searchParams.set("lang", mode);
+      window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+    }
+    window.MathJax?.typesetPromise?.();
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => setMode(button.dataset.languageOption));
+  });
+  setMode(initial, false);
+}
 
 function setupSiteMenu() {
   const button = document.querySelector(".menu-button");
@@ -114,6 +160,7 @@ function setupSectionTracking() {
 }
 
 setupSiteMenu();
+setupLanguageSwitcher();
 setupContents();
 setupContentsFilter();
 setupReadingProgress();

@@ -1,7 +1,8 @@
 # Multilingual Editions
 
-This directory is the durable English–Japanese–Chinese source for the book's
-multilingual PDF and web editions. The accepted V3 English manuscript remains
+This directory is the durable English-Japanese-Chinese source for the book's
+multilingual PDF and native web editions. All 25 readings and 1,164 stable
+blocks are translated and reviewed; the accepted V3 English manuscript remains
 the alignment spine.
 
 Each file under `entries/` represents one reading. A stable block records the
@@ -35,6 +36,19 @@ Generated translations must preserve block structure, equations, image paths,
 URLs, names, numbers, qualifications, and attribution. A target block is not
 publishable until deterministic validation and contextual review both pass.
 
-Planned outputs are separate English, Japanese, and Chinese books; an aligned
-EN–JA–ZH maximum-language book; and a native web reader with monolingual and
-combined modes. Nutstore receives PDFs only.
+Install the deterministic annotation dependencies and build every edition with:
+
+```sh
+python3 -m pip install -r requirements-multilingual.txt
+make multilingual-validate
+make multilingual-pdfs
+make web
+```
+
+PDF generation uses LuaLaTeX, `luatexja-ruby`, Noto CJK fonts, Pandoc, Poppler,
+and qpdf. The outputs under `editions/languages/` are separate English,
+Japanese, and Chinese books plus an aligned EN-JA-ZH maximum-language book,
+each in full-size and 6x9 pocket form. The native reader offers EN, 日本語,
+中文, and Together modes from the same JSON. `make sync-multilingual` copies
+only accepted PDFs to the LazyEarn Nutstore share using atomic, checksum-verified
+replacement; no HTML is synchronized there.

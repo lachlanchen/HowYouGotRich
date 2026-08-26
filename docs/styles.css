@@ -1237,6 +1237,195 @@ select {
   letter-spacing: 0.075em;
 }
 
+.language-switcher {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.78);
+  box-shadow: 0 8px 24px rgba(37, 31, 24, 0.06);
+}
+
+.language-switcher > span {
+  padding: 0 8px 0 10px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.09em;
+}
+
+.language-switcher button {
+  min-height: 34px;
+  padding: 0 13px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.language-switcher button:hover {
+  background: rgba(199, 80, 42, 0.08);
+}
+
+.language-switcher button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.localized-layer,
+.language-layer {
+  display: none;
+}
+
+body[data-language-mode="en"] .localized-layer[data-language="en"],
+body[data-language-mode="ja"] .localized-layer[data-language="ja"],
+body[data-language-mode="zh"] .localized-layer[data-language="zh"] {
+  display: inline;
+}
+
+body[data-language-mode="en"] .language-layer[data-language="en"],
+body[data-language-mode="ja"] .language-layer[data-language="ja"],
+body[data-language-mode="zh"] .language-layer[data-language="zh"],
+.language-layer.language-shared {
+  display: block;
+}
+
+body[data-language-mode="all"] .localized-layer[data-language="en"] {
+  display: initial;
+}
+
+body[data-language-mode="all"] .chapter-masthead .localized-layer {
+  display: block;
+}
+
+body[data-language-mode="all"] .language-layer:not(.language-shared) {
+  display: block;
+}
+
+.aligned-block {
+  scroll-margin-top: 110px;
+}
+
+.language-ja,
+[lang="ja"] {
+  font-family: "Noto Serif CJK JP", "Noto Serif JP", "Yu Mincho", serif;
+}
+
+.language-zh,
+[lang="zh"] {
+  font-family: "Noto Serif CJK SC", "Noto Serif SC", "Songti SC", serif;
+}
+
+.language-ja,
+.language-zh {
+  line-height: 2.05;
+}
+
+ruby {
+  ruby-align: center;
+  ruby-position: over;
+}
+
+rt {
+  color: #66706a;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.47em;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+body[data-language-mode="all"] .chapter-masthead h1 .localized-layer + .localized-layer {
+  margin-top: 0.22em;
+  font-size: 0.54em;
+  line-height: 1.18;
+}
+
+body[data-language-mode="all"] .chapter-question .localized-layer + .localized-layer {
+  margin-top: 0.45em;
+  font-size: 0.82em;
+  font-style: normal;
+  line-height: 1.8;
+}
+
+body[data-language-mode="all"] .aligned-block:not(.aligned-header):not(.aligned-shared):not(.aligned-figure) {
+  margin: 2.15em 0;
+  padding: 1.15em 1.25em 0.2em;
+  border: 1px solid rgba(154, 120, 61, 0.22);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(255, 253, 248, 0.88), rgba(243, 239, 228, 0.55));
+}
+
+body[data-language-mode="all"] .language-layer:not(.language-shared)::before {
+  display: block;
+  margin-bottom: 0.58em;
+  color: var(--coral);
+  content: attr(data-label);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+body[data-language-mode="all"] .language-layer + .language-layer {
+  margin-top: 1.3em;
+  padding-top: 1.25em;
+  border-top: 1px solid rgba(154, 120, 61, 0.18);
+}
+
+body[data-language-mode="all"] .aligned-header .language-layer + .language-layer {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+body[data-language-mode="all"] .aligned-header .language-ja h2,
+body[data-language-mode="all"] .aligned-header .language-zh h2 {
+  margin-top: 0.65em;
+  font-size: clamp(24px, 2.5vw, 35px);
+  line-height: 1.35;
+}
+
+.figure-caption-translations {
+  margin-top: 0.75em;
+}
+
+.translated-caption {
+  display: none;
+  margin: 0.55em 0 0 !important;
+  color: var(--muted);
+  font-size: 0.86em;
+  line-height: 1.8;
+}
+
+.translated-caption strong {
+  margin-right: 0.45em;
+  color: var(--coral);
+  font-family: var(--mono);
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+}
+
+body[data-language-mode="ja"] .aligned-figure figcaption,
+body[data-language-mode="zh"] .aligned-figure figcaption {
+  display: none;
+}
+
+body[data-language-mode="ja"] .translated-caption[data-language="ja"],
+body[data-language-mode="zh"] .translated-caption[data-language="zh"],
+body[data-language-mode="all"] .translated-caption {
+  display: block;
+}
+
 .chapter-body {
   max-width: 760px;
   color: #222825;
@@ -1247,6 +1436,11 @@ select {
 }
 
 .chapter-body > p:first-child {
+  font-size: 1.1em;
+  line-height: 1.68;
+}
+
+.chapter-body > .aligned-block:first-child .language-layer > p:first-child {
   font-size: 1.1em;
   line-height: 1.68;
 }
@@ -1558,6 +1752,61 @@ select {
 .reader-utilities {
   display: flex;
   align-items: stretch;
+}
+
+.language-edition-menu {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.language-edition-menu summary {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.language-edition-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-edition-menu summary:hover,
+.language-edition-menu[open] summary {
+  background: var(--coral);
+}
+
+.language-edition-menu > div {
+  position: absolute;
+  z-index: 80;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  width: 260px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  background: #18332f;
+  box-shadow: 0 18px 44px rgba(8, 20, 18, 0.3);
+}
+
+.language-edition-menu > div p {
+  margin: 10px 8px 4px;
+  color: rgba(255, 255, 255, 0.56);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.09em;
+}
+
+.reader-utilities .language-edition-menu > div a {
+  min-height: 36px;
+  padding: 8px;
+  border-radius: 6px;
 }
 
 .reader-utilities a,

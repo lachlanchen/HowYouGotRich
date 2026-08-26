@@ -32,6 +32,14 @@ EXPECTED_FILES = {
     "editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf",
     "editions/v3/how-you-got-rich-v3.pdf",
     "editions/v3/how-you-got-rich-v3-pocket-1.2x.pdf",
+    "editions/languages/how-you-got-rich-en.pdf",
+    "editions/languages/how-you-got-rich-en-pocket-1.2x.pdf",
+    "editions/languages/how-you-got-rich-ja.pdf",
+    "editions/languages/how-you-got-rich-ja-pocket-1.2x.pdf",
+    "editions/languages/how-you-got-rich-zh.pdf",
+    "editions/languages/how-you-got-rich-zh-pocket-1.2x.pdf",
+    "editions/languages/how-you-got-rich-en-ja-zh.pdf",
+    "editions/languages/how-you-got-rich-en-ja-zh-pocket-1.2x.pdf",
     "assets/figures/ch01-tony-stephens-ribbon.jpg",
     "assets/figures/ch20-carlton-dennis-tax-board.jpg",
 }
@@ -126,6 +134,12 @@ def validate_manifest(site_root: Path, errors: list[str]) -> None:
         fail(errors, "native web edition is not marked complete")
     if web_edition.get("readings") != 25:
         fail(errors, f"expected 25 native readings, found {web_edition.get('readings')}")
+    if web_edition.get("alignedBlocks") != 1164:
+        fail(errors, f"expected 1164 aligned web blocks, found {web_edition.get('alignedBlocks')}")
+    if web_edition.get("languages") != ["en", "ja", "zh"]:
+        fail(errors, f"book manifest languages are incorrect: {web_edition.get('languages')}")
+    if web_edition.get("modes") != ["en", "ja", "zh", "all"]:
+        fail(errors, f"book manifest language modes are incorrect: {web_edition.get('modes')}")
 
     editions = book.get("editions", {})
     for key, page_field in (("full", "pageFull"), ("pocket", "pagePocket")):
@@ -165,6 +179,12 @@ def validate_web_edition(site_root: Path, errors: list[str]) -> None:
     entries = manifest.get("entries", [])
     if manifest.get("entryCount") != 25 or len(entries) != 25:
         fail(errors, f"native edition must contain 25 readings, found {len(entries)}")
+    if manifest.get("languages") != ["en", "ja", "zh"]:
+        fail(errors, f"native edition languages are incorrect: {manifest.get('languages')}")
+    if manifest.get("languageModes") != ["en", "ja", "zh", "all"]:
+        fail(errors, f"native language modes are incorrect: {manifest.get('languageModes')}")
+    if manifest.get("alignedBlocks") != 1164:
+        fail(errors, f"expected 1164 aligned blocks, found {manifest.get('alignedBlocks')}")
     slugs = [entry.get("slug") for entry in entries]
     expected_slugs = ["note-on-the-conversations", "introduction"] + [
         f"ch{number:02d}" for number in range(1, 24)
@@ -173,6 +193,7 @@ def validate_web_edition(site_root: Path, errors: list[str]) -> None:
         fail(errors, f"native reading sequence is incorrect: {slugs}")
 
     calculated_words = 0
+    calculated_blocks = 0
     for index, entry in enumerate(entries):
         output_name = entry.get("output")
         source_name = entry.get("source")
@@ -194,6 +215,22 @@ def validate_web_edition(site_root: Path, errors: list[str]) -> None:
         content = output.read_text(encoding="utf-8")
         if '<div class="chapter-body">' not in content:
             fail(errors, f"native reading has no chapter body: {output_name}")
+        if 'class="language-switcher"' not in content:
+            fail(errors, f"native reading has no language selector: {output_name}")
+        aligned_blocks = content.count('data-block-id="')
+        if aligned_blocks != entry.get("alignedBlocks"):
+            fail(
+                errors,
+                f"aligned block count mismatch in {output_name}: "
+                f"{aligned_blocks} vs {entry.get('alignedBlocks')}",
+            )
+        else:
+            calculated_blocks += aligned_blocks
+        for language in ("en", "ja", "zh"):
+            if f'data-language="{language}"' not in content:
+                fail(errors, f"native reading lacks {language} content: {output_name}")
+        if "<ruby>" not in content or "<rt>" not in content:
+            fail(errors, f"native reading lacks semantic ruby annotations: {output_name}")
         if "<iframe" in content.lower():
             fail(errors, f"native reading embeds an iframe instead of HTML: {output_name}")
         if re.search(r"\\(?:ifdim|paperwidth|else|fi)\b", content):
@@ -213,16 +250,24 @@ def validate_web_edition(site_root: Path, errors: list[str]) -> None:
         )
     if calculated_words < 45000:
         fail(errors, f"native edition is too short to contain the complete book: {calculated_words} words")
+    if calculated_blocks != 1164:
+        fail(errors, f"native aligned block total does not reconcile: {calculated_blocks}")
     if sum(int(entry.get("figures", 0)) for entry in entries) != 2:
         fail(errors, "native edition must retain exactly two accepted documentary figures")
 
     records = search.get("records", [])
-    if search.get("recordCount") != len(records) or len(records) < 140:
+    if search.get("recordCount") != len(records) or len(records) < 220:
         fail(errors, f"native search index is incomplete: {len(records)} records")
+    language_counts = {
+        language: sum(record.get("language") == language for record in records)
+        for language in ("en", "ja", "zh")
+    }
+    if language_counts["ja"] != 25 or language_counts["zh"] != 25:
+        fail(errors, f"multilingual search coverage is incomplete: {language_counts}")
     for record in records:
         href = record.get("href")
         text = record.get("text")
-        target = site_root / href.split("#", 1)[0] if isinstance(href, str) else None
+        target = site_root / urlparse(href).path if isinstance(href, str) else None
         if target is None or not target.is_file():
             fail(errors, f"search record has invalid target: {href}")
         if not isinstance(text, str) or len(text) < 40:
@@ -231,6 +276,33 @@ def validate_web_edition(site_root: Path, errors: list[str]) -> None:
     book_page = (site_root / "book.html").read_text(encoding="utf-8")
     if "<iframe" in book_page.lower() or "COMPLETE NATIVE WEB EDITION" not in book_page:
         fail(errors, "book.html is not the complete native edition gateway")
+
+
+def validate_multilingual_pdfs(site_root: Path, errors: list[str]) -> None:
+    names = (
+        "how-you-got-rich-en.pdf",
+        "how-you-got-rich-en-pocket-1.2x.pdf",
+        "how-you-got-rich-ja.pdf",
+        "how-you-got-rich-ja-pocket-1.2x.pdf",
+        "how-you-got-rich-zh.pdf",
+        "how-you-got-rich-zh-pocket-1.2x.pdf",
+        "how-you-got-rich-en-ja-zh.pdf",
+        "how-you-got-rich-en-ja-zh-pocket-1.2x.pdf",
+    )
+    for name in names:
+        path = site_root / "editions" / "languages" / name
+        pages = pdf_pages(path) if path.is_file() else None
+        if pages is None or pages < 100:
+            fail(errors, f"multilingual PDF is missing or unexpectedly short: {name}")
+            continue
+        result = subprocess.run(
+            ["qpdf", "--check", str(path)],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode:
+            fail(errors, f"qpdf rejected multilingual PDF: {name}")
 
 
 def validate_public_text(site_root: Path, errors: list[str]) -> None:
@@ -260,6 +332,7 @@ def main() -> int:
     validate_links(site_root, errors)
     validate_manifest(site_root, errors)
     validate_web_edition(site_root, errors)
+    validate_multilingual_pdfs(site_root, errors)
     validate_public_text(site_root, errors)
 
     if errors:
@@ -270,7 +343,7 @@ def main() -> int:
 
     print(
         "Website validation passed: 25 native readings, 5 parts, 23 chapters, "
-        "2 PDF editions, source checksums and local links intact."
+        "1,164 EN-JA-ZH blocks, 10 PDF editions, checksums and local links intact."
     )
     return 0
 

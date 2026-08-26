@@ -8,7 +8,10 @@
     "start": "chapters/note-on-the-conversations.html",
     "manifest": "data/web-edition.json",
     "searchIndex": "data/search-index.json",
-    "readings": 25
+    "readings": 25,
+    "alignedBlocks": 1164,
+    "languages": ["en", "ja", "zh"],
+    "modes": ["en", "ja", "zh", "all"]
   },
   "editions": {
     "full": {
