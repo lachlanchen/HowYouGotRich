@@ -11,7 +11,7 @@
 [![PDF جيب](https://img.shields.io/badge/PDF-Pocket_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/reader.html"><img src="../assets/cover-page-1.png" alt="غلاف How You Got Rich" width="520"></a></p>
+<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="غلاف How You Got Rich" width="520"></a></p>
 
 يبحث *How You Got Rich* بصراحة في كيفية صنع الثروة والحفاظ عليها واستخدامها،
 وكيف يمكن أن تتحول إلى حرية بدلا من سعي لا ينتهي وراء المكانة. تشكل مقابلات
@@ -33,8 +33,9 @@ School of Hard Knocks العمود الفقري الإنساني والاستد�
 | الصيغة | الأنسب لها | الرابط |
 | --- | --- | --- |
 | موقع الكتاب | الفكرة والبنية والإصدارات والتحديثات | [زيارة](https://lachlanchen.github.io/HowYouGotRich/) |
-| قارئ المتصفح | الكتاب كاملا مع تنقل بين الفصول | [قراءة](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
-| إصدار الويب | عرض فصلي ميسر يتطور تدريجيا | [استكشاف](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| كتاب ويب أصلي | النص الكامل القابل للبحث والمعادلات والصور والتنقل | [قراءة](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
+| خريطة الكتاب | البحث في النص أو استكشاف الحجة في خمسة أجزاء | [استكشاف](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| إصدارات PDF | صيغ اختيارية للعرض والطباعة والتنزيل | [فتح](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | PDF كامل · 163 صفحة | الطباعة والحاسوب والأجهزة اللوحية الكبيرة | [تنزيل](../editions/how-you-got-rich.pdf) |
 | PDF جيب 1.2x · 349 صفحة | القارئات والشاشات الصغيرة وطباعة 6x9 | [تنزيل](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 

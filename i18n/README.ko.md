@@ -11,7 +11,7 @@
 [![포켓 PDF](https://img.shields.io/badge/PDF-포켓_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/후원-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/reader.html"><img src="../assets/cover-page-1.png" alt="How You Got Rich 표지" width="520"></a></p>
+<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="How You Got Rich 표지" width="520"></a></p>
 
 *How You Got Rich*는 사람들이 부를 만들고 지키고 사용하는 방식, 그리고
 부가 끝없는 지위 경쟁이 아니라 자유가 되는 방식을 솔직하게 탐구합니다.
@@ -33,8 +33,9 @@ School of Hard Knocks 인터뷰가 인간적이고 증거에 기반한 중심축
 | 형식 | 용도 | 열기 |
 | --- | --- | --- |
 | 책 웹사이트 | 전제, 구조, 판본, 업데이트 | [방문](https://lachlanchen.github.io/HowYouGotRich/) |
-| 브라우저 리더 | 부와 장별 탐색이 가능한 전체 책 | [읽기](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
-| 웹 판본 | 확장 중인 접근성 높은 장별 보기 | [살펴보기](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| 네이티브 웹북 | 검색 가능한 전문, 수식, 그림, 장별 탐색 | [읽기](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
+| 책 지도 | 전문을 검색하거나 5부 논지를 탐색 | [살펴보기](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| PDF 판본 | 화면, 인쇄, 다운로드를 위한 선택 형식 | [열기](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | 전체 PDF · 163쪽 | 인쇄, 데스크톱, 큰 태블릿 | [다운로드](../editions/how-you-got-rich.pdf) |
 | 포켓 1.2x PDF · 349쪽 | 전자책 단말기, 작은 화면, 6x9 인쇄 | [다운로드](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 

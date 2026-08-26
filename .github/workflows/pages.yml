@@ -5,9 +5,11 @@ on:
     branches: [main]
     paths:
       - "docs/**"
+      - "source/book/**"
       - "editions/**"
       - "assets/cover-page-1.png"
       - "scripts/build-site.sh"
+      - "scripts/build-web-edition.py"
       - "scripts/validate-site.py"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
@@ -32,7 +34,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install validation tools
-        run: sudo apt-get update && sudo apt-get install --yes poppler-utils rsync
+        run: sudo apt-get update && sudo apt-get install --yes pandoc poppler-utils rsync
 
       - name: Assemble and validate the site
         run: make verify-site

@@ -1,6 +1,7 @@
 "use strict";
 
 const BOOK_DATA = "data/book.json";
+const READING_STATE_KEY = "how-you-got-rich:web-reading-state";
 
 function setupMenu() {
   const button = document.querySelector(".menu-button");
@@ -32,6 +33,12 @@ function readerUrl(chapter, edition = "full") {
   return `reader.html?${params.toString()}`;
 }
 
+function webChapterUrl(chapter) {
+  if (chapter.web) return chapter.web;
+  if (chapter.number === undefined) return "chapters/introduction.html";
+  return `chapters/ch${String(chapter.number).padStart(2, "0")}.html`;
+}
+
 function renderLanding(book) {
   const grid = document.querySelector("#part-grid");
   if (!grid) return;
@@ -51,6 +58,24 @@ function renderWebBook(book) {
   const outline = document.querySelector("#book-outline");
   if (!outline) return;
 
+  const opening = document.querySelector("#opening-list");
+  if (opening) {
+    const entries = [
+      { ...book.preface, numberLabel: "N" },
+      { ...book.introduction, numberLabel: "00" },
+    ];
+    for (const entry of entries) {
+      const link = element("a", "chapter-card opening-card");
+      link.href = webChapterUrl(entry);
+      link.dataset.search = `${entry.title} ${entry.question}`.toLocaleLowerCase();
+      link.append(element("span", "chapter-number", entry.numberLabel));
+      link.append(element("h4", "", entry.title));
+      link.append(element("p", "", entry.question));
+      link.append(element("span", "open-mark", "→"));
+      opening.append(link);
+    }
+  }
+
   for (const part of book.parts) {
     const section = element("section", "book-part");
     section.id = `part-${part.number.toLowerCase()}`;
@@ -63,17 +88,111 @@ function renderWebBook(book) {
     const chapters = element("div", "chapter-list");
     for (const chapter of part.chapters) {
       const link = element("a", "chapter-card");
-      link.href = readerUrl(chapter);
+      link.href = webChapterUrl(chapter);
+      link.dataset.search = `${chapter.title} ${chapter.question} ${part.title}`.toLocaleLowerCase();
       link.append(element("span", "chapter-number", String(chapter.number).padStart(2, "0")));
       link.append(element("h4", "", chapter.title));
       link.append(element("p", "", chapter.question));
-      link.append(element("span", "open-mark", "↗"));
+      link.append(element("span", "open-mark", "→"));
       chapters.append(link);
     }
 
     section.append(heading, chapters);
     outline.append(section);
   }
+
+  setupBookSearch(book);
+  setupResumeLink();
+}
+
+function setupResumeLink() {
+  const link = document.querySelector("#resume-reading");
+  if (!link) return;
+  try {
+    const state = JSON.parse(window.localStorage.getItem(READING_STATE_KEY) || "null");
+    if (!state?.path || !state?.title) return;
+    const path = state.path.split("/HowYouGotRich/").pop() || state.path.replace(/^\//, "");
+    link.href = path;
+    link.querySelector("strong").textContent = `Continue: ${state.title}`;
+    link.hidden = false;
+  } catch {
+    // The book remains navigable when storage is unavailable or malformed.
+  }
+}
+
+function setupBookSearch(book) {
+  const input = document.querySelector("#book-search");
+  const results = document.querySelector("#book-search-results");
+  const status = document.querySelector("#book-search-status");
+  if (!input || !results || !status) return;
+
+  let recordsPromise;
+  const loadRecords = () => {
+    recordsPromise ||= fetch(book.webEdition.searchIndex)
+      .then((response) => {
+        if (!response.ok) throw new Error(`Search index returned ${response.status}`);
+        return response.json();
+      })
+      .then((index) => index.records);
+    return recordsPromise;
+  };
+
+  const snippet = (text, tokens) => {
+    const lower = text.toLocaleLowerCase();
+    const positions = tokens.map((token) => lower.indexOf(token)).filter((position) => position >= 0);
+    const start = positions.length ? Math.max(0, Math.min(...positions) - 90) : 0;
+    const end = Math.min(text.length, start + 260);
+    return `${start ? "…" : ""}${text.slice(start, end).trim()}${end < text.length ? "…" : ""}`;
+  };
+
+  input.addEventListener("input", async () => {
+    const query = input.value.trim().toLocaleLowerCase();
+    results.replaceChildren();
+    if (query.length < 2) {
+      status.textContent = "Search the complete native text by idea, mechanism, or phrase.";
+      return;
+    }
+
+    const tokens = query.split(/\s+/).filter(Boolean);
+    try {
+      const records = await loadRecords();
+      const matches = records
+        .map((record) => {
+          const title = record.chapter.toLocaleLowerCase();
+          const section = record.section.toLocaleLowerCase();
+          const text = record.text.toLocaleLowerCase();
+          if (!tokens.every((token) => title.includes(token) || section.includes(token) || text.includes(token))) {
+            return null;
+          }
+          const score = tokens.reduce(
+            (total, token) => total
+              + (title.includes(token) ? 12 : 0)
+              + (section.includes(token) ? 8 : 0)
+              + Math.min(5, text.split(token).length - 1),
+            0,
+          );
+          return { record, score };
+        })
+        .filter(Boolean)
+        .sort((left, right) => right.score - left.score)
+        .slice(0, 10);
+
+      status.textContent = matches.length
+        ? `${matches.length} strongest match${matches.length === 1 ? "" : "es"}`
+        : "No matching passage. Try a broader term.";
+      for (const { record } of matches) {
+        const link = element("a", "book-search-result");
+        link.href = record.href;
+        link.append(element("span", "", record.chapter));
+        link.append(element("strong", "", record.section));
+        link.append(element("p", "", snippet(record.text, tokens)));
+        results.append(link);
+      }
+    } catch (error) {
+      status.textContent = "Full-text search is temporarily unavailable; the chapter map remains complete.";
+      console.error(error);
+    }
+  });
 }
 
 function allReaderEntries(book) {
@@ -202,7 +321,7 @@ async function start() {
   } catch (error) {
     const target = document.querySelector("#part-grid, #book-outline, #reader-toc");
     if (target) {
-      const message = element("p", "load-error", "The book navigation could not be loaded. Use the direct PDF link instead.");
+      const message = element("p", "load-error", "The book navigation could not be loaded. Start with the native introduction link instead.");
       target.append(message);
     }
     console.error(error);

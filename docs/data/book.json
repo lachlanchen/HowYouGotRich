@@ -3,6 +3,13 @@
   "subtitle": "From Abundance to Fulfillment and Contentment",
   "version": "3.0.0",
   "status": "accepted",
+  "webEdition": {
+    "status": "complete",
+    "start": "chapters/note-on-the-conversations.html",
+    "manifest": "data/web-edition.json",
+    "searchIndex": "data/search-index.json",
+    "readings": 25
+  },
   "editions": {
     "full": {
       "label": "Full size",
@@ -15,8 +22,14 @@
       "pages": 349
     }
   },
+  "preface": {
+    "title": "A Note on the Conversations",
+    "web": "chapters/note-on-the-conversations.html",
+    "question": "How should success stories be read without turning experience into law?"
+  },
   "introduction": {
     "title": "Introduction: The Question Under the Question",
+    "web": "chapters/introduction.html",
     "pageFull": 13,
     "pagePocket": 17,
     "question": "What do people really mean when they say that someone is rich?"

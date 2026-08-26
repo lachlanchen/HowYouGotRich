@@ -11,7 +11,7 @@
 [![口袋版 PDF](https://img.shields.io/badge/PDF-口袋版_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/赞助-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/reader.html"><img src="../assets/cover-page-1.png" alt="《How You Got Rich》封面" width="520"></a></p>
+<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="《How You Got Rich》封面" width="520"></a></p>
 
 《*How You Got Rich*》坦率地追问：人们如何创造、守住并运用财富，又如何让
 财富成为自由，而不是一场没有终点的地位竞赛。School of Hard Knocks 的
@@ -32,8 +32,9 @@
 | 形式 | 适合场景 | 打开 |
 | --- | --- | --- |
 | 图书网站 | 了解主旨、结构、版本与更新 | [访问](https://lachlanchen.github.io/HowYouGotRich/) |
-| 浏览器阅读器 | 按部与章节导航完整图书 | [阅读](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
-| 网页版 | 持续完善的无障碍章节视图 | [探索](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| 原生网页版 | 完整可搜索正文、公式、图片与章节导航 | [阅读](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
+| 全书地图 | 搜索正文或浏览五部论证结构 | [探索](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| PDF 版本 | 可选的浏览、打印与下载格式 | [打开](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | 全尺寸 PDF · 163 页 | 打印、桌面与大屏平板 | [下载](../editions/how-you-got-rich.pdf) |
 | 口袋版 1.2x PDF · 349 页 | 电纸书、小屏设备与 6x9 印刷 | [下载](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 

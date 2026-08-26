@@ -10,6 +10,9 @@ without losing a known-good book.
 - Future accepted editions receive their own directory, release, and tag before
   the unversioned links move forward.
 - Published edition files are never silently replaced or removed.
+- The native HTML edition is regenerated from the current accepted TeX and
+  records source and output checksums for every reading. Historical PDFs remain
+  the fixed comparison artifacts when the web presentation evolves.
 
 GitHub releases provide convenient immutable downloads. The `v2.0.0` release
 contains the full-size and 1.2x pocket V2 PDFs; `v3.0.0` contains the accepted

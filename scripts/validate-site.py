@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import subprocess
@@ -16,11 +17,14 @@ EXPECTED_FILES = {
     "index.html",
     "reader.html",
     "book.html",
+    "web-reader.js",
     "styles.css",
     "app.js",
     "favicon.svg",
     "site.webmanifest",
     "data/book.json",
+    "data/web-edition.json",
+    "data/search-index.json",
     "assets/cover-page-1.png",
     "editions/how-you-got-rich.pdf",
     "editions/how-you-got-rich-pocket-1.2x.pdf",
@@ -28,6 +32,8 @@ EXPECTED_FILES = {
     "editions/v2/how-you-got-rich-v2-pocket-1.2x.pdf",
     "editions/v3/how-you-got-rich-v3.pdf",
     "editions/v3/how-you-got-rich-v3-pocket-1.2x.pdf",
+    "assets/figures/ch01-tony-stephens-ribbon.jpg",
+    "assets/figures/ch20-carlton-dennis-tax-board.jpg",
 }
 PUBLIC_LEAK_PATTERNS = (
     re.compile(r"\bcodex\b", re.IGNORECASE),
@@ -55,6 +61,14 @@ def fail(errors: list[str], message: str) -> None:
     errors.append(message)
 
 
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
 def pdf_pages(path: Path) -> int | None:
     try:
         result = subprocess.run(
@@ -70,7 +84,7 @@ def pdf_pages(path: Path) -> int | None:
 
 
 def validate_links(site_root: Path, errors: list[str]) -> None:
-    for html_path in sorted(site_root.glob("*.html")):
+    for html_path in sorted(site_root.rglob("*.html")):
         parser = LinkCollector()
         parser.feed(html_path.read_text(encoding="utf-8"))
         for raw_link in parser.links:
@@ -84,10 +98,10 @@ def validate_links(site_root: Path, errors: list[str]) -> None:
             try:
                 target.relative_to(site_root.resolve())
             except ValueError:
-                fail(errors, f"{html_path.name}: link escapes site root: {raw_link}")
+                fail(errors, f"{html_path.relative_to(site_root)}: link escapes site root: {raw_link}")
                 continue
             if not target.exists():
-                fail(errors, f"{html_path.name}: missing local target: {raw_link}")
+                fail(errors, f"{html_path.relative_to(site_root)}: missing local target: {raw_link}")
 
 
 def validate_manifest(site_root: Path, errors: list[str]) -> None:
@@ -106,6 +120,12 @@ def validate_manifest(site_root: Path, errors: list[str]) -> None:
     numbers = [chapter.get("number") for chapter in chapters]
     if numbers != list(range(1, 24)):
         fail(errors, f"chapter sequence is not 1 through 23: {numbers}")
+
+    web_edition = book.get("webEdition", {})
+    if web_edition.get("status") != "complete":
+        fail(errors, "native web edition is not marked complete")
+    if web_edition.get("readings") != 25:
+        fail(errors, f"expected 25 native readings, found {web_edition.get('readings')}")
 
     editions = book.get("editions", {})
     for key, page_field in (("full", "pageFull"), ("pocket", "pagePocket")):
@@ -129,6 +149,88 @@ def validate_manifest(site_root: Path, errors: list[str]) -> None:
             fail(errors, f"{key} chapter page targets are not increasing")
         elif declared_pages and targets[-1] > declared_pages:
             fail(errors, f"{key} chapter page target exceeds edition length")
+
+
+def validate_web_edition(site_root: Path, errors: list[str]) -> None:
+    repo_root = Path(__file__).resolve().parents[1]
+    manifest_path = site_root / "data/web-edition.json"
+    search_path = site_root / "data/search-index.json"
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        search = json.loads(search_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        fail(errors, f"invalid native web data: {exc}")
+        return
+
+    entries = manifest.get("entries", [])
+    if manifest.get("entryCount") != 25 or len(entries) != 25:
+        fail(errors, f"native edition must contain 25 readings, found {len(entries)}")
+    slugs = [entry.get("slug") for entry in entries]
+    expected_slugs = ["note-on-the-conversations", "introduction"] + [
+        f"ch{number:02d}" for number in range(1, 24)
+    ]
+    if slugs != expected_slugs:
+        fail(errors, f"native reading sequence is incorrect: {slugs}")
+
+    calculated_words = 0
+    for index, entry in enumerate(entries):
+        output_name = entry.get("output")
+        source_name = entry.get("source")
+        if not isinstance(output_name, str) or not isinstance(source_name, str):
+            fail(errors, f"native entry {index + 1} lacks source or output path")
+            continue
+        output = site_root / output_name
+        source = repo_root / source_name
+        if not output.is_file():
+            fail(errors, f"missing native reading: {output_name}")
+            continue
+        if not source.is_file():
+            fail(errors, f"missing canonical source: {source_name}")
+        elif sha256(source) != entry.get("sourceSha256"):
+            fail(errors, f"stale native reading source checksum: {entry.get('slug')}")
+        if sha256(output) != entry.get("outputSha256"):
+            fail(errors, f"native reading output checksum mismatch: {entry.get('slug')}")
+
+        content = output.read_text(encoding="utf-8")
+        if '<div class="chapter-body">' not in content:
+            fail(errors, f"native reading has no chapter body: {output_name}")
+        if "<iframe" in content.lower():
+            fail(errors, f"native reading embeds an iframe instead of HTML: {output_name}")
+        if re.search(r"\\(?:ifdim|paperwidth|else|fi)\b", content):
+            fail(errors, f"responsive TeX command leaked into HTML: {output_name}")
+
+        words = entry.get("words")
+        minimum = 900 if index >= 2 else 300
+        if not isinstance(words, int) or words < minimum:
+            fail(errors, f"native reading is unexpectedly short: {entry.get('slug')} ({words})")
+        else:
+            calculated_words += words
+
+    if manifest.get("totalWords") != calculated_words:
+        fail(
+            errors,
+            f"native word total does not reconcile: {manifest.get('totalWords')} vs {calculated_words}",
+        )
+    if calculated_words < 45000:
+        fail(errors, f"native edition is too short to contain the complete book: {calculated_words} words")
+    if sum(int(entry.get("figures", 0)) for entry in entries) != 2:
+        fail(errors, "native edition must retain exactly two accepted documentary figures")
+
+    records = search.get("records", [])
+    if search.get("recordCount") != len(records) or len(records) < 140:
+        fail(errors, f"native search index is incomplete: {len(records)} records")
+    for record in records:
+        href = record.get("href")
+        text = record.get("text")
+        target = site_root / href.split("#", 1)[0] if isinstance(href, str) else None
+        if target is None or not target.is_file():
+            fail(errors, f"search record has invalid target: {href}")
+        if not isinstance(text, str) or len(text) < 40:
+            fail(errors, f"search record has insufficient text: {href}")
+
+    book_page = (site_root / "book.html").read_text(encoding="utf-8")
+    if "<iframe" in book_page.lower() or "COMPLETE NATIVE WEB EDITION" not in book_page:
+        fail(errors, "book.html is not the complete native edition gateway")
 
 
 def validate_public_text(site_root: Path, errors: list[str]) -> None:
@@ -157,6 +259,7 @@ def main() -> int:
 
     validate_links(site_root, errors)
     validate_manifest(site_root, errors)
+    validate_web_edition(site_root, errors)
     validate_public_text(site_root, errors)
 
     if errors:
@@ -165,7 +268,10 @@ def main() -> int:
             print(f"- {error}", file=sys.stderr)
         return 1
 
-    print("Website validation passed: 5 parts, 23 chapters, 2 editions, local links intact.")
+    print(
+        "Website validation passed: 25 native readings, 5 parts, 23 chapters, "
+        "2 PDF editions, source checksums and local links intact."
+    )
     return 0
 
 

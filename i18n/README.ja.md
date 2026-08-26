@@ -11,7 +11,7 @@
 [![ポケット PDF](https://img.shields.io/badge/PDF-ポケット_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/支援-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/reader.html"><img src="../assets/cover-page-1.png" alt="How You Got Rich の表紙" width="520"></a></p>
+<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="How You Got Rich の表紙" width="520"></a></p>
 
 *How You Got Rich* は、人がどのように富を生み、守り、使うのか、そして
 富を終わりのない地位競争ではなく自由へ変えるにはどうすればよいのかを
@@ -33,8 +33,9 @@
 | 形式 | 用途 | 開く |
 | --- | --- | --- |
 | 書籍サイト | 主題、構成、版、更新情報 | [訪問](https://lachlanchen.github.io/HowYouGotRich/) |
-| ブラウザーリーダー | 章ナビゲーション付き全文 | [読む](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
-| Web 版 | 成長中のアクセシブルな章表示 | [見る](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| ネイティブ Web ブック | 検索可能な全文、数式、図、章ナビゲーション | [読む](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
+| ブックマップ | 全文検索または五部構成の論旨を閲覧 | [見る](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| PDF 版 | 画面、印刷、ダウンロード用の任意形式 | [開く](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | フルサイズ PDF · 163ページ | 印刷、デスクトップ、大型タブレット | [ダウンロード](../editions/how-you-got-rich.pdf) |
 | ポケット 1.2x PDF · 349ページ | 電子書籍端末、小型画面、6x9印刷 | [ダウンロード](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 

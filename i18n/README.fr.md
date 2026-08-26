@@ -11,7 +11,7 @@
 [![PDF de poche](https://img.shields.io/badge/PDF-Poche_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/Soutenir-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/reader.html"><img src="../assets/cover-page-1.png" alt="Couverture de How You Got Rich" width="520"></a></p>
+<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="Couverture de How You Got Rich" width="520"></a></p>
 
 *How You Got Rich* examine sans détour comment la richesse se crée, se conserve
 et s'emploie, puis comment elle peut devenir une liberté plutôt qu'une quête de
@@ -34,8 +34,9 @@ trois. Elle ne peut pas décider de l'usage de cet espace.
 | Format | Usage | Ouvrir |
 | --- | --- | --- |
 | Site du livre | Idée, structure, éditions et actualités | [Visiter](https://lachlanchen.github.io/HowYouGotRich/) |
-| Lecteur web | Livre intégral avec navigation par chapitre | [Lire](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
-| Édition web | Lecture accessible en développement | [Explorer](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| Livre web natif | Texte intégral consultable, équations, figures et navigation | [Lire](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
+| Carte du livre | Rechercher le texte ou parcourir l'argument en cinq parties | [Explorer](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| Éditions PDF | Formats facultatifs pour écran, impression et téléchargement | [Ouvrir](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | PDF grand format · 163 pages | Impression, ordinateur et grande tablette | [Télécharger](../editions/how-you-got-rich.pdf) |
 | PDF poche 1.2x · 349 pages | Liseuse, petit écran et impression 6x9 | [Télécharger](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 

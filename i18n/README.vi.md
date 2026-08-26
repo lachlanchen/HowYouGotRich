@@ -11,7 +11,7 @@
 [![PDF bỏ túi](https://img.shields.io/badge/PDF-Bỏ_túi_1.2x-CB8A3D?style=for-the-badge&logo=bookstack&logoColor=white)](../editions/how-you-got-rich-pocket-1.2x.pdf)
 [![GitHub Sponsors](https://img.shields.io/badge/Ủng_hộ-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
-<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/reader.html"><img src="../assets/cover-page-1.png" alt="Bìa How You Got Rich" width="520"></a></p>
+<p align="center"><a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html"><img src="../assets/cover-page-1.png" alt="Bìa How You Got Rich" width="520"></a></p>
 
 *How You Got Rich* thẳng thắn tìm hiểu cách con người tạo ra, giữ gìn và sử
 dụng của cải, cũng như cách biến của cải thành tự do thay vì một cuộc đua địa
@@ -34,8 +34,9 @@ thể quyết định ta nên dùng không gian ấy như thế nào.
 | Định dạng | Phù hợp với | Mở |
 | --- | --- | --- |
 | Trang sách | Tiền đề, cấu trúc, các ấn bản và cập nhật | [Truy cập](https://lachlanchen.github.io/HowYouGotRich/) |
-| Trình đọc web | Toàn bộ sách với điều hướng theo chương | [Đọc](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
-| Ấn bản web | Chế độ đọc chương dễ tiếp cận đang phát triển | [Khám phá](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| Sách web gốc | Toàn văn có thể tìm kiếm, công thức, hình và điều hướng chương | [Đọc](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
+| Bản đồ sách | Tìm toàn văn hoặc khám phá lập luận năm phần | [Khám phá](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| Ấn bản PDF | Định dạng tùy chọn để xem, in và tải xuống | [Mở](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | PDF đầy đủ · 163 trang | In ấn, máy tính và máy tính bảng lớn | [Tải xuống](../editions/how-you-got-rich.pdf) |
 | PDF bỏ túi 1.2x · 349 trang | Máy đọc sách, màn hình nhỏ và in 6x9 | [Tải xuống](../editions/how-you-got-rich-pocket-1.2x.pdf) |
 

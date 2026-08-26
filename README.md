@@ -12,7 +12,7 @@
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-lachlanchen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/lachlanchen)
 
 <p align="center">
-  <a href="https://lachlanchen.github.io/HowYouGotRich/reader.html">
+  <a href="https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html">
     <img src="assets/cover-page-1.png" alt="How You Got Rich cover" width="520">
   </a>
 </p>
@@ -36,9 +36,9 @@ decide how that room should be used.
 
 | Format | Best for | Open |
 | --- | --- | --- |
-| Book website | Premise, structure, editions, and updates | [Visit](https://lachlanchen.github.io/HowYouGotRich/) |
-| Browser reader | Full book with part and chapter navigation | [Read](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
-| Web edition | A growing, accessible chapter view | [Explore](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| Native web book | Complete searchable prose, equations, figures, and chapter navigation | [Read](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
+| Book map | Search all prose or browse the five-part argument | [Explore](https://lachlanchen.github.io/HowYouGotRich/book.html) |
+| PDF editions | Optional browser, print, and download formats | [Open](https://lachlanchen.github.io/HowYouGotRich/reader.html) |
 | Full-size V3 PDF · 163 pages | Print, desktop, and larger tablets | [Download](editions/how-you-got-rich.pdf) |
 | Pocket V3 1.2x PDF · 349 pages | E-readers, compact screens, and 6x9 printing | [Download](editions/how-you-got-rich-pocket-1.2x.pdf) |
 
@@ -65,14 +65,16 @@ route can simply be copied.
 
 ## Build and Verify
 
-Install TeX Live with `pdflatex`, plus `python3`, `rsync`, Poppler, and `qpdf`.
+Install TeX Live with `pdflatex`, plus `pandoc`, `python3`, `rsync`, Poppler,
+and `qpdf`.
 
 ```bash
 make full          # full-size PDF
 make pocket        # 6x9 pocket PDF
 make verify        # publication checks
-make site          # assemble the local website and PDF reader
-make verify-site   # validate navigation, metadata, and local assets
+make web           # regenerate native HTML from accepted TeX
+make site          # assemble the native website and PDF downloads
+make verify-site   # validate source parity, prose, navigation, and assets
 make serve         # preview at http://localhost:8000
 ```
 

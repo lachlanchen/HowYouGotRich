@@ -1,4 +1,4 @@
-.PHONY: all full pocket verify site verify-site serve
+.PHONY: all full pocket verify web site verify-site serve
 
 all: full pocket
 
@@ -11,7 +11,10 @@ pocket:
 verify:
 	./scripts/verify.sh
 
-site:
+web:
+	python3 scripts/build-web-edition.py
+
+site: web
 	./scripts/build-site.sh
 
 verify-site: site

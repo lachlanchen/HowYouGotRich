@@ -38,11 +38,15 @@ Generic intros, logos, duplicate poses, and unrelated frames are not accepted.
 make full
 make pocket
 make verify
+make web
+make verify-site
 ```
 
 Repair layout defects locally. Do not globally shrink type or weaken margins
-to hide one bad page. Pull requests should describe the reader-visible change,
-source evidence, and validation performed.
+to hide one bad page. Native chapter HTML is generated from accepted TeX; edit
+the manuscript or exporter rather than patching generated chapter prose by
+hand. Pull requests should describe the reader-visible change, source evidence,
+and validation performed.
 
 ## Contribution Rights
 
