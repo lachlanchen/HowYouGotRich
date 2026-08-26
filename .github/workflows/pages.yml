@@ -43,7 +43,7 @@ jobs:
       - name: Install validation tools
         run: |
           sudo apt-get update
-          sudo apt-get install --yes pandoc poppler-utils qpdf rsync
+          sudo apt-get install --yes libmecab-dev mecab pandoc poppler-utils qpdf rsync
           python3 -m pip install --disable-pip-version-check -r requirements-multilingual.txt
 
       - name: Assemble and validate the site
