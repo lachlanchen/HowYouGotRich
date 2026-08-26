@@ -36,6 +36,8 @@ jobs:
     steps:
       - name: Check out the publication
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
