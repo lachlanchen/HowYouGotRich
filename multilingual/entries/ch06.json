@@ -1674,7 +1674,7 @@
         "markdown": "## Enter without a solution to defend",
         "tokens": [
           {
-            "t": "enter-without-a-solution-to-defendEnter"
+            "t": "Enter"
           },
           {
             "t": " "
@@ -4032,7 +4032,7 @@
         "markdown": "## The workaround is the first prototype",
         "tokens": [
           {
-            "t": "the-workaround-is-the-first-prototypeThe"
+            "t": "The"
           },
           {
             "t": " "
@@ -5724,7 +5724,7 @@
         "markdown": "## Notice what nobody thinks to report",
         "tokens": [
           {
-            "t": "notice-what-nobody-thinks-to-reportNotice"
+            "t": "Notice"
           },
           {
             "t": " "
@@ -7635,7 +7635,7 @@
         "markdown": "## Read complaints in pairs",
         "tokens": [
           {
-            "t": "read-complaints-in-pairsRead"
+            "t": "Read"
           },
           {
             "t": " "
@@ -9532,7 +9532,7 @@
         "markdown": "## Ask for a commitment that can disappoint you",
         "tokens": [
           {
-            "t": "ask-for-a-commitment-that-can-disappoint-youAsk"
+            "t": "Ask"
           },
           {
             "t": " "
@@ -10096,7 +10096,7 @@
         "markdown": "::: {.center}\n  **Evidence rung**        **What it can establish**\n  ------------------------ -----------------------------------------------------------------------------------------------------------------\n  Specific past behavior   The problem occurred, with an observable consequence.\n  Existing workaround      The burden was sufficient to provoke a real response and an alternative worth preserving or replacing.\n  Costly commitment        One named role will give time, access, reputation, data, or money to advance its decision.\n  Bounded pilot            The uncertain mechanism can meet a stated test under explicit conditions and a protected safety floor.\n  Viable delivery          The promised change can be produced in use at the required quality, support burden, and cost within this scope.\n  Repeated exchange        Appropriate customers choose, use, pay, renew, or refer under comparable terms beyond novelty.\n:::",
         "tokens": [
           {
-            "t": "centerEvidence"
+            "t": "Evidence"
           },
           {
             "t": " "
@@ -12138,7 +12138,7 @@
         "markdown": "## Listen for change without worshipping trends",
         "tokens": [
           {
-            "t": "listen-for-change-without-worshipping-trendsListen"
+            "t": "Listen"
           },
           {
             "t": " "
@@ -14446,7 +14446,7 @@
         "markdown": "## Listening is not obedience",
         "tokens": [
           {
-            "t": "listening-is-not-obedienceListening"
+            "t": "Listening"
           },
           {
             "t": " "
@@ -16186,7 +16186,7 @@
         "markdown": "## Run the learning sequence",
         "tokens": [
           {
-            "t": "run-the-learning-sequenceRun"
+            "t": "Run"
           },
           {
             "t": " "
@@ -17382,7 +17382,7 @@
         "markdown": "## Write the experiment contract before the result",
         "tokens": [
           {
-            "t": "write-the-experiment-contract-before-the-resultWrite"
+            "t": "Write"
           },
           {
             "t": " "

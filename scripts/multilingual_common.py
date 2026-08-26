@@ -116,7 +116,7 @@ def block_to_markdown(
 
 def metadata_inline_text(value: Any) -> str:
     if isinstance(value, str):
-        return value
+        return ""
     if isinstance(value, list):
         return "".join(metadata_inline_text(item) for item in value)
     if not isinstance(value, dict):
@@ -129,6 +129,10 @@ def metadata_inline_text(value: Any) -> str:
         return " "
     if node_type == "Code" and isinstance(content, list):
         return str(content[-1])
+    if node_type == "Header" and isinstance(content, list):
+        return metadata_inline_text(content[2])
+    if node_type == "Div" and isinstance(content, list):
+        return metadata_inline_text(content[1])
     if node_type == "Math" and isinstance(content, list):
         return ""
     if node_type in {"Image", "Link"} and isinstance(content, list):

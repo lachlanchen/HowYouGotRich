@@ -2148,7 +2148,7 @@
         "markdown": "## Draw the chain before choosing the asset",
         "tokens": [
           {
-            "t": "draw-the-chain-before-choosing-the-assetDraw"
+            "t": "Draw"
           },
           {
             "t": " "
@@ -4047,7 +4047,7 @@
         "markdown": "## Own the bottleneck only when it improves the promise",
         "tokens": [
           {
-            "t": "own-the-bottleneck-only-when-it-improves-the-promiseOwn"
+            "t": "Own"
           },
           {
             "t": " "
@@ -6283,7 +6283,7 @@
         "markdown": "## Integrate to repair coordination, not to collect businesses",
         "tokens": [
           {
-            "t": "integrate-to-repair-coordination-not-to-collect-businessesIntegrate"
+            "t": "Integrate"
           },
           {
             "t": " "
@@ -8324,7 +8324,7 @@
         "markdown": "## Read every asset as a bundle of rights and duties",
         "tokens": [
           {
-            "t": "read-every-asset-as-a-bundle-of-rights-and-dutiesRead"
+            "t": "Read"
           },
           {
             "t": " "
@@ -10223,7 +10223,7 @@
         "markdown": "## Separate legal ownership, economics, and control",
         "tokens": [
           {
-            "t": "separate-legal-ownership-economics-and-controlSeparate"
+            "t": "Separate"
           },
           {
             "t": " "
@@ -12858,7 +12858,7 @@
         "markdown": "## Match capital to the productive constraint",
         "tokens": [
           {
-            "t": "match-capital-to-the-productive-constraintMatch"
+            "t": "Match"
           },
           {
             "t": " "
@@ -16563,7 +16563,7 @@
         "markdown": "## An acquisition buys the failures too",
         "tokens": [
           {
-            "t": "an-acquisition-buys-the-failures-tooAn"
+            "t": "An"
           },
           {
             "t": " "
@@ -18290,19 +18290,7 @@
         "markdown": "## Update Record 3 with rights and critical links",
         "tokens": [
           {
-            "t": "update-record"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "3"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "with-rights-and-critical-linksUpdate"
+            "t": "Update"
           },
           {
             "t": " "

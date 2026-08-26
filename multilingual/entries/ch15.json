@@ -1331,7 +1331,7 @@
         "markdown": "## Choose what should continue before choosing who",
         "tokens": [
           {
-            "t": "choose-what-should-continue-before-choosing-whoChoose"
+            "t": "Choose"
           },
           {
             "t": " "
@@ -3821,7 +3821,7 @@
         "markdown": "## A successor must be willing, capable, and removable",
         "tokens": [
           {
-            "t": "a-successor-must-be-willing-capable-and-removableA"
+            "t": "A"
           },
           {
             "t": " "
@@ -6758,7 +6758,7 @@
         "markdown": "## Remove dependence without erasing judgment",
         "tokens": [
           {
-            "t": "remove-dependence-without-erasing-judgmentRemove"
+            "t": "Remove"
           },
           {
             "t": " "
@@ -9064,7 +9064,7 @@
         "markdown": "## Know what the headline price means",
         "tokens": [
           {
-            "t": "know-what-the-headline-price-meansKnow"
+            "t": "Know"
           },
           {
             "t": " "
@@ -11331,7 +11331,7 @@
         "markdown": "## Let trust travel without selling a person",
         "tokens": [
           {
-            "t": "let-trust-travel-without-selling-a-personLet"
+            "t": "Let"
           },
           {
             "t": " "
@@ -13341,7 +13341,7 @@
         "markdown": "## Decide what should not be sold",
         "tokens": [
           {
-            "t": "decide-what-should-not-be-soldDecide"
+            "t": "Decide"
           },
           {
             "t": " "
@@ -14910,19 +14910,7 @@
         "markdown": "## Complete Record 3 with transferability and succession",
         "tokens": [
           {
-            "t": "complete-record"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "3"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "with-transferability-and-successionComplete"
+            "t": "Complete"
           },
           {
             "t": " "

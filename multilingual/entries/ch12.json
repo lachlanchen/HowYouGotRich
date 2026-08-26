@@ -1271,7 +1271,7 @@
         "markdown": "## Put every number in its own account",
         "tokens": [
           {
-            "t": "put-every-number-in-its-own-accountPut"
+            "t": "Put"
           },
           {
             "t": " "
@@ -4013,7 +4013,7 @@
         "markdown": "## Draw the cash calendar before accepting the sale",
         "tokens": [
           {
-            "t": "draw-the-cash-calendar-before-accepting-the-saleDraw"
+            "t": "Draw"
           },
           {
             "t": " "
@@ -6333,7 +6333,7 @@
         "markdown": "## Choose explicitly who carries the gap",
         "tokens": [
           {
-            "t": "choose-explicitly-who-carries-the-gapChoose"
+            "t": "Choose"
           },
           {
             "t": " "
@@ -8903,7 +8903,7 @@
         "markdown": "## Become bankable before the emergency",
         "tokens": [
           {
-            "t": "become-bankable-before-the-emergencyBecome"
+            "t": "Become"
           },
           {
             "t": " "
@@ -10930,7 +10930,7 @@
         "markdown": "## Stage growth so the company can learn",
         "tokens": [
           {
-            "t": "stage-growth-so-the-company-can-learnStage"
+            "t": "Stage"
           },
           {
             "t": " "
@@ -13319,19 +13319,7 @@
         "markdown": "## Update Record 3 with permission to grow",
         "tokens": [
           {
-            "t": "update-record"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "3"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "with-permission-to-growUpdate"
+            "t": "Update"
           },
           {
             "t": " "

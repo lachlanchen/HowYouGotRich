@@ -1118,7 +1118,7 @@
         "markdown": "## Match the three clocks",
         "tokens": [
           {
-            "t": "match-the-three-clocksMatch"
+            "t": "Match"
           },
           {
             "t": " "
@@ -3104,7 +3104,7 @@
         "markdown": "## Write every claim in the capital stack",
         "tokens": [
           {
-            "t": "write-every-claim-in-the-capital-stackWrite"
+            "t": "Write"
           },
           {
             "t": " "
@@ -5051,7 +5051,7 @@
         "markdown": "## Let rent offset a home only after it is earned",
         "tokens": [
           {
-            "t": "let-rent-offset-a-home-only-after-it-is-earnedLet"
+            "t": "Let"
           },
           {
             "t": " "
@@ -6346,7 +6346,7 @@
         "markdown": "## Changing the lender does not remove the debt",
         "tokens": [
           {
-            "t": "changing-the-lender-does-not-remove-the-debtChanging"
+            "t": "Changing"
           },
           {
             "t": " "
@@ -9225,7 +9225,7 @@
         "markdown": "## Maturity can defeat a correct long-run thesis",
         "tokens": [
           {
-            "t": "maturity-can-defeat-a-correct-long-run-thesisMaturity"
+            "t": "Maturity"
           },
           {
             "t": " "
@@ -10851,19 +10851,7 @@
         "markdown": "## Open Record 4 with a leverage decision",
         "tokens": [
           {
-            "t": "open-record"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "4"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "with-a-leverage-decisionOpen"
+            "t": "Open"
           },
           {
             "t": " "

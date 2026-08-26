@@ -1404,7 +1404,7 @@
         "markdown": "## Complete the address before reading the amount",
         "tokens": [
           {
-            "t": "complete-the-address-before-reading-the-amountComplete"
+            "t": "Complete"
           },
           {
             "t": " "
@@ -4178,7 +4178,7 @@
         "markdown": "## Follow the customer all the way to cash",
         "tokens": [
           {
-            "t": "follow-the-customer-all-the-way-to-cashFollow"
+            "t": "Follow"
           },
           {
             "t": " "
@@ -6758,7 +6758,7 @@
         "markdown": "## Reconcile before you admire",
         "tokens": [
           {
-            "t": "reconcile-before-you-admireReconcile"
+            "t": "Reconcile"
           },
           {
             "t": " "
@@ -8477,7 +8477,7 @@
         "markdown": "## A valuation is a proposition",
         "tokens": [
           {
-            "t": "a-valuation-is-a-propositionA"
+            "t": "A"
           },
           {
             "t": " "
@@ -11694,7 +11694,7 @@
         "markdown": "## Do not let a peak year become a permanent burden",
         "tokens": [
           {
-            "t": "do-not-let-a-peak-year-become-a-permanent-burdenDo"
+            "t": "Do"
           },
           {
             "t": " "
@@ -13302,19 +13302,7 @@
         "markdown": "## Open Record 4 with one addressed number",
         "tokens": [
           {
-            "t": "open-record"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "4"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "with-one-addressed-numberOpen"
+            "t": "Open"
           },
           {
             "t": " "

@@ -17,6 +17,7 @@ from multilingual_common import (
     build_entry_specs,
     latex_document,
     load_book,
+    markdown_block,
     plain_text_from_block,
     protected_signature,
     sha256_text,
@@ -82,7 +83,13 @@ def preserve_translation(
     value = existing.get(language)
     if not isinstance(value, dict):
         return {"status": "missing", "markdown": "", "tokens": []}
-    return value
+    preserved = dict(value)
+    markdown = str(preserved.get("markdown", ""))
+    if markdown:
+        target_block = markdown_block(markdown)
+        target_text = plain_text_from_block(target_block)
+        preserved["tokens"] = tokens_for_language(target_text, language)
+    return preserved
 
 
 def prepare_entry(spec: Any) -> dict[str, Any]:

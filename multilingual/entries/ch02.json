@@ -1881,7 +1881,7 @@
         "markdown": "## A starting position has more than one number",
         "tokens": [
           {
-            "t": "a-starting-position-has-more-than-one-numberA"
+            "t": "A"
           },
           {
             "t": " "
@@ -5408,7 +5408,7 @@
         "markdown": "## Luck leaves fingerprints",
         "tokens": [
           {
-            "t": "luck-leaves-fingerprintsLuck"
+            "t": "Luck"
           },
           {
             "t": " "
@@ -8590,7 +8590,7 @@
         "markdown": "## What remains when the cash disappears",
         "tokens": [
           {
-            "t": "what-remains-when-the-cash-disappearsWhat"
+            "t": "What"
           },
           {
             "t": " "
@@ -12325,7 +12325,7 @@
         "markdown": "## A network is an institution in miniature",
         "tokens": [
           {
-            "t": "a-network-is-an-institution-in-miniatureA"
+            "t": "A"
           },
           {
             "t": " "
@@ -15302,7 +15302,7 @@
         "markdown": "## Agency needs a loss budget",
         "tokens": [
           {
-            "t": "agency-needs-a-loss-budgetAgency"
+            "t": "Agency"
           },
           {
             "t": " "
@@ -17502,7 +17502,7 @@
         "markdown": "## Add the starting line to the wealth record",
         "tokens": [
           {
-            "t": "add-the-starting-line-to-the-wealth-recordAdd"
+            "t": "Add"
           },
           {
             "t": " "

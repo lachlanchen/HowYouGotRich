@@ -1268,7 +1268,7 @@
         "markdown": "## Hire for a missing contribution",
         "tokens": [
           {
-            "t": "hire-for-a-missing-contributionHire"
+            "t": "Hire"
           },
           {
             "t": " "
@@ -5286,7 +5286,7 @@
         "markdown": "## Test contribution before dividing ownership",
         "tokens": [
           {
-            "t": "test-contribution-before-dividing-ownershipTest"
+            "t": "Test"
           },
           {
             "t": " "
@@ -8186,7 +8186,7 @@
         "markdown": "## Let many people think and one person close the decision",
         "tokens": [
           {
-            "t": "let-many-people-think-and-one-person-close-the-decisionLet"
+            "t": "Let"
           },
           {
             "t": " "
@@ -11218,7 +11218,7 @@
         "markdown": "## Culture is what the company protects under pressure",
         "tokens": [
           {
-            "t": "culture-is-what-the-company-protects-under-pressureCulture"
+            "t": "Culture"
           },
           {
             "t": " "
@@ -14007,7 +14007,7 @@
         "markdown": "## Do not make another person carry invisible risk",
         "tokens": [
           {
-            "t": "do-not-make-another-person-carry-invisible-riskDo"
+            "t": "Do"
           },
           {
             "t": " "
@@ -15957,7 +15957,7 @@
         "markdown": "## A leader needs somewhere to put the truth",
         "tokens": [
           {
-            "t": "a-leader-needs-somewhere-to-put-the-truthA"
+            "t": "A"
           },
           {
             "t": " "
@@ -17375,19 +17375,7 @@
         "markdown": "## Update Record 3 with the people-and-governance charter",
         "tokens": [
           {
-            "t": "update-record"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "3"
-          },
-          {
-            "t": "-"
-          },
-          {
-            "t": "with-the-people-and-governance-charterUpdate"
+            "t": "Update"
           },
           {
             "t": " "

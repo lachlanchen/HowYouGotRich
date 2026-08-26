@@ -1526,7 +1526,7 @@
         "markdown": "## Name the change being bought",
         "tokens": [
           {
-            "t": "name-the-change-being-boughtName"
+            "t": "Name"
           },
           {
             "t": " "
@@ -3650,7 +3650,7 @@
         "markdown": "## Estimate value without disguising uncertainty",
         "tokens": [
           {
-            "t": "estimate-value-without-disguising-uncertaintyEstimate"
+            "t": "Estimate"
           },
           {
             "t": " "
@@ -5950,7 +5950,7 @@
         "markdown": "## The number belongs to a buyer",
         "tokens": [
           {
-            "t": "the-number-belongs-to-a-buyerThe"
+            "t": "The"
           },
           {
             "t": " "
@@ -8633,7 +8633,7 @@
         "markdown": "## A value story must earn belief",
         "tokens": [
           {
-            "t": "a-value-story-must-earn-beliefA"
+            "t": "A"
           },
           {
             "t": " "
@@ -11955,7 +11955,7 @@
         "markdown": "## A price creates duties",
         "tokens": [
           {
-            "t": "a-price-creates-dutiesA"
+            "t": "A"
           },
           {
             "t": " "
@@ -14343,7 +14343,7 @@
         "markdown": "## Open the reciprocal exchange record",
         "tokens": [
           {
-            "t": "open-the-reciprocal-exchange-recordOpen"
+            "t": "Open"
           },
           {
             "t": " "
