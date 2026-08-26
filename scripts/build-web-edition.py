@@ -457,7 +457,7 @@ def main() -> int:
                 "sections": len(sections),
                 "displayMath": fragment.count('class="math display"'),
                 "inlineMath": fragment.count('class="math inline"'),
-                "figures": fragment.count("<figure>"),
+                "figures": len(re.findall(r'src="\.\./assets/figures/[^"]+"', fragment)),
                 "tables": fragment.count("<table>"),
             }
         )
