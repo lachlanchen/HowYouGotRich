@@ -8,6 +8,7 @@ import json
 import logging
 import re
 import subprocess
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
@@ -176,6 +177,17 @@ def protected_signature(block: dict[str, Any]) -> list[dict[str, str]]:
         elif node_type == "Code" and isinstance(content, list):
             protected.append({"type": "code", "value": str(content[-1])})
     return protected
+
+
+def protected_equivalent(
+    source: list[dict[str, str]], target: list[dict[str, str]]
+) -> bool:
+    """Require the same protected payloads while allowing grammatical reordering."""
+
+    def counts(values: list[dict[str, str]]) -> Counter[tuple[str, str]]:
+        return Counter((str(item.get("type", "")), str(item.get("value", ""))) for item in values)
+
+    return counts(source) == counts(target)
 
 
 def structure_signature(block: dict[str, Any]) -> dict[str, Any]:

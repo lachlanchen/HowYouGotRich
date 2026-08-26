@@ -21,6 +21,7 @@ from multilingual_common import (
     load_entry,
     markdown_block,
     plain_text_from_block,
+    protected_equivalent,
     protected_signature,
     sha256_text,
     structure_signature,
@@ -83,7 +84,7 @@ def validate_target(
             f"{location}: structure changed from {source['structure']} to {structure}"
         )
     protected = protected_signature(target_block)
-    if protected != source["protected"]:
+    if not protected_equivalent(source["protected"], protected):
         errors.append(f"{location}: protected math/link/image/code payload changed")
 
     text = plain_text_from_block(target_block)

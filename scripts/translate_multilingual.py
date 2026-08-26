@@ -23,6 +23,7 @@ from multilingual_common import (
     load_manifest,
     markdown_block,
     plain_text_from_block,
+    protected_equivalent,
     protected_signature,
     structure_signature,
     tokens_for_language,
@@ -236,7 +237,7 @@ def validate_response(
                 continue
             if structure_signature(block) != source["structure"]:
                 errors.append(f"{location}: Markdown structure changed")
-            if protected_signature(block) != source["protected"]:
+            if not protected_equivalent(source["protected"], protected_signature(block)):
                 errors.append(f"{location}: protected math/link/image/code changed")
             text = plain_text_from_block(block)
             visible = len(re.sub(r"\s+", "", text))
