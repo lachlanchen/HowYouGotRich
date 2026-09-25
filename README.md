@@ -37,6 +37,10 @@ decide how that room should be used.
 
 ## Read the Book
 
+### Read in Bunko
+
+The complete English, Japanese, and Chinese edition is also in the [Bunko web reader](https://lachlan.lazying.art/Bunko/?book=how-you-got-rich) for language comparison and offline chapter caching. [Bunko on the App Store](https://apps.apple.com/us/app/bunko-classics-with-ruby/id6815137919) is live, but this book's shelf is currently in the app's internal test build; use the web reader until that update is public. Google Play package `art.lazying.bunko` is awaiting public release.
+
 | Format | Best for | Open |
 | --- | --- | --- |
 | Native web book | Complete searchable EN, 日本語, 中文, or aligned Together reading with ruby annotations | [Read](https://lachlanchen.github.io/HowYouGotRich/chapters/note-on-the-conversations.html) |
